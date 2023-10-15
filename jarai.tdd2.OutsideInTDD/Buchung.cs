@@ -2,7 +2,7 @@
 
 internal class Buchung
 {
-    public Buchung(double amount, string date)
+    public Buchung(double amount, DateTime date)
     {
         Amount = amount;
         Date = date;
@@ -10,7 +10,7 @@ internal class Buchung
 
     public double Amount { get; }
 
-    public string Date { get; }
+    public DateTime Date { get; }
 
     public override string ToString()
     {

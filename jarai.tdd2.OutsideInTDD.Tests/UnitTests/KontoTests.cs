@@ -9,19 +9,19 @@ public class KontoTests
     public void EinzahlenTest()
     {
         // Arrange
-        var sut = new Konto();
+        var target = new Konto(new FakeKalenderService());
 
         // Act
-        sut.Einzahlen(100);
+        target.Einzahlen(100);
     }
 
     [TestMethod]
     public void AbhebenTest()
     {
         // Arrange
-        var sut = new Konto();
+        var target = new Konto(new FakeKalenderService());
 
         // Act
-        sut.Abheben(50);
+        target.Abheben(50);
     }
 }

@@ -9,7 +9,7 @@ public class ApprovalTest
     public void KontoauszugTest()
     {
         // Arrange
-        var target = new Konto();
+        var target = new Konto(new FakeKalenderService());
         target.Einzahlen(100);
         target.Abheben(50);
 
