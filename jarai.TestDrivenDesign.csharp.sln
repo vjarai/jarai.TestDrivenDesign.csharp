@@ -5,9 +5,9 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd1.refersher", "jarai.tdd1.refersher\jarai.tdd1.refersher.csproj", "{0C6009B7-9925-47DB-877E-4768F0AA3E29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd1.RedGreenRefactor", "jarai.tdd.TripleA\jarai.tdd1.RedGreenRefactor.csproj", "{304B5A9B-C5F0-4215-9087-5A0B5A861A31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd1.RedGreenRefactor", "jarai.tdd1.RedGreenRefactor\jarai.tdd1.RedGreenRefactor.csproj", "{304B5A9B-C5F0-4215-9087-5A0B5A861A31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd1.RedGreenRefactor.Tests", "jarai.tdd.TripleATests\jarai.tdd1.RedGreenRefactor.Tests.csproj", "{91F3C518-9428-4712-95CC-FD194B6A8BEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd1.RedGreenRefactor.Tests", "jarai.tdd1.RedGreenRefactor.Tests\jarai.tdd1.RedGreenRefactor.Tests.csproj", "{91F3C518-9428-4712-95CC-FD194B6A8BEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

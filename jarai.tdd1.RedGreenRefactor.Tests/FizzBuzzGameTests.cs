@@ -11,10 +11,10 @@ namespace jarai.tdd1.RedGreenRefactor.Tests
             var game = new FizzBuzzGame();
 
             // Act
-            var result = game.GetResponse(1);
+            var actual = game.GetResponse(1);
 
             // Assert
-            Assert.Equal(1, result);
+            Assert.Equal(1, actual);
         }
 
         [Fact()]
@@ -24,10 +24,10 @@ namespace jarai.tdd1.RedGreenRefactor.Tests
             var game = new FizzBuzzGame();
 
             // Act
-            var result = game.GetResponse(3);
+            var actual = game.GetResponse(3);
 
             // Assert
-            Assert.Equal("Fizz", result);
+            Assert.Equal("Fizz", actual);
         }
 
         [Fact()]
@@ -37,10 +37,10 @@ namespace jarai.tdd1.RedGreenRefactor.Tests
             var game = new FizzBuzzGame();
 
             // Act
-            var result = game.GetResponse(5);
+            var actual = game.GetResponse(5);
 
             // Assert
-            Assert.Equal("Buzz", result);
+            Assert.Equal("Buzz", actual);
         }
 
         [Fact()]
@@ -50,23 +50,28 @@ namespace jarai.tdd1.RedGreenRefactor.Tests
             var game = new FizzBuzzGame();
 
             // Act
-            var result = game.GetResponse(15);
+            var actual = game.GetResponse(15);
 
             // Assert
-            Assert.Equal("FizzBuzz", result);
+            Assert.Equal("FizzBuzz", actual);
         }
 
-        [Fact()]
-        public void GetResponse_when_negative_throws_ArgumentOutOfRangeException()
+        [Theory()]
+        [InlineData(0)]
+        [InlineData(101)]
+        public void GetResponse_when_less_then_1_or_bigger_then_100_throws_ArgumentOutOfRangeException(int input)
         {
             // Arrange
             var game = new FizzBuzzGame();
 
             // Act
-            Assert.Throws<ArgumentOutOfRangeException>(() => game.GetResponse(-1));
+            Assert.Throws<ArgumentOutOfRangeException>(() => game.GetResponse(input));
 
         }
 
+        /// <summary>
+        /// Parametrisierter Test: Deckt alle einfachem Testfälle in einem einzigen Test ab
+        /// </summary>
         [Theory()]
         [InlineData(1, 1)]
         [InlineData(3, "Fizz")]
@@ -78,10 +83,10 @@ namespace jarai.tdd1.RedGreenRefactor.Tests
             var game = new FizzBuzzGame();
 
             // Act
-            var result = game.GetResponse(input);
+            var actual = game.GetResponse(input);
 
             // Assert
-            Assert.Equal(expected, result);
+            Assert.Equal(expected, actual);
         }
     }
 }

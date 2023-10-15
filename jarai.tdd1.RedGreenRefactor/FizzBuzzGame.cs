@@ -4,9 +4,9 @@
     {
         public object GetResponse(int number)
         {
-            if (number < 0)
+            if (number is < 1 or > 100)
             {
-                throw new ArgumentOutOfRangeException("Zahl muss größer 0 sein.");
+                throw new ArgumentOutOfRangeException(nameof(number));
             }
 
 
