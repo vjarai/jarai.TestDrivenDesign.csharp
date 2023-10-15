@@ -5,9 +5,13 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd1.refersher", "jarai.tdd1.refersher\jarai.tdd1.refersher.csproj", "{0C6009B7-9925-47DB-877E-4768F0AA3E29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd1.RedGreenRefactor", "jarai.tdd1.RedGreenRefactor\jarai.tdd1.RedGreenRefactor.csproj", "{304B5A9B-C5F0-4215-9087-5A0B5A861A31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd1.RedGreenRefactor", "jarai.tdd1.RedGreenRefactor\jarai.tdd1.RedGreenRefactor.csproj", "{304B5A9B-C5F0-4215-9087-5A0B5A861A31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd1.RedGreenRefactor.Tests", "jarai.tdd1.RedGreenRefactor.Tests\jarai.tdd1.RedGreenRefactor.Tests.csproj", "{91F3C518-9428-4712-95CC-FD194B6A8BEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd1.RedGreenRefactor.Tests", "jarai.tdd1.RedGreenRefactor.Tests\jarai.tdd1.RedGreenRefactor.Tests.csproj", "{91F3C518-9428-4712-95CC-FD194B6A8BEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd2.OutsideInTDD", "jarai.tdd2.OutsideInTDD\jarai.tdd2.OutsideInTDD.csproj", "{6FD224A6-3E44-489F-9CEF-1C944AF5DF9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd2.OutsideInTDD.Tests", "jarai.tdd2.OutsideInTDD.Tests\jarai.tdd2.OutsideInTDD.Tests.csproj", "{BE849870-1389-460F-8626-6DDDE3F47F2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{91F3C518-9428-4712-95CC-FD194B6A8BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91F3C518-9428-4712-95CC-FD194B6A8BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91F3C518-9428-4712-95CC-FD194B6A8BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FD224A6-3E44-489F-9CEF-1C944AF5DF9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FD224A6-3E44-489F-9CEF-1C944AF5DF9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FD224A6-3E44-489F-9CEF-1C944AF5DF9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FD224A6-3E44-489F-9CEF-1C944AF5DF9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE849870-1389-460F-8626-6DDDE3F47F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE849870-1389-460F-8626-6DDDE3F47F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE849870-1389-460F-8626-6DDDE3F47F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE849870-1389-460F-8626-6DDDE3F47F2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
