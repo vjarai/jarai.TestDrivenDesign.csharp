@@ -1,4 +1,4 @@
-﻿namespace jarai.tdd3.Stubbing;
+﻿namespace jarai.tdd3.TestDoubles;
 
 public class Cabrio : Pkw
 {

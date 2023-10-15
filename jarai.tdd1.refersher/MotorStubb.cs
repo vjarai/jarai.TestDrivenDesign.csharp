@@ -1,6 +1,6 @@
-﻿namespace jarai.tdd3.Stubbing;
+﻿namespace jarai.tdd3.TestDoubles;
 
-public class StubbedMotor : IMotor
+public class MotorStubb : IMotor
 {
     public void Anlassen()
     {

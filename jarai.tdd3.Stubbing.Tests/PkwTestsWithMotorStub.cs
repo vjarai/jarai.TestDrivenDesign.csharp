@@ -1,14 +1,14 @@
 ﻿using Xunit;
 
-namespace jarai.tdd3.Stubbing.Tests;
+namespace jarai.tdd3.TestDoubles.Tests;
 
-public class PkwTests
+public class PkwTestsWithMotorStub
 {
     [Fact]
     public void Fahren_erhoeht_Tachostand()
     {
         // Arrange
-        var target = new Pkw(new StubbedMotor());
+        var target = new Pkw(new MotorStubb());
 
         // Act
         target.Fahren(100);

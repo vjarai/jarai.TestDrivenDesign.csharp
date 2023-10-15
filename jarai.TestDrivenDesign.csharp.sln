@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd3.Stubbing", "jarai.tdd1.refersher\jarai.tdd3.Stubbing.csproj", "{0C6009B7-9925-47DB-877E-4768F0AA3E29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd3.TestDoubles", "jarai.tdd1.refersher\jarai.tdd3.TestDoubles.csproj", "{0C6009B7-9925-47DB-877E-4768F0AA3E29}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd1.RedGreenRefactor", "jarai.tdd1.RedGreenRefactor\jarai.tdd1.RedGreenRefactor.csproj", "{304B5A9B-C5F0-4215-9087-5A0B5A861A31}"
 EndProject
@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd2.OutsideInTDD", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd2.OutsideInTDD.Tests", "jarai.tdd2.OutsideInTDD.Tests\jarai.tdd2.OutsideInTDD.Tests.csproj", "{BE849870-1389-460F-8626-6DDDE3F47F2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd3.Stubbing.Tests", "jarai.tdd3.Stubbing.Tests\jarai.tdd3.Stubbing.Tests.csproj", "{D6D05F54-55DD-437E-84DF-F89314FEB19C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd3.TestDoubles.Tests", "jarai.tdd3.Stubbing.Tests\jarai.tdd3.TestDoubles.Tests.csproj", "{D6D05F54-55DD-437E-84DF-F89314FEB19C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
