@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="jarai.tdd2.OutsideInTDD.Konto">
+    <Position X="2.75" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAQAAAAAAEA=</HashCode>
+      <FileName>Konto.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="jarai.tdd2.OutsideInTDD.IKonto">
+    <Position X="2.75" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAEA=</HashCode>
+      <FileName>IKonto.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

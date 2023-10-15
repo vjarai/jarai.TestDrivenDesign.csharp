@@ -24,14 +24,4 @@
     <ProjectReference Include="..\jarai.tdd2.OutsideInTDD\jarai.tdd2.OutsideInTDD.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UnitTests\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="AcceptanceTests\KontoApprovalTests.ErstelleKontoauszugApprovalTest.approved.txt">
-      <DependentUpon>KontoApprovalTests.cs</DependentUpon>
-    </None>
-  </ItemGroup>
-
 </Project>
