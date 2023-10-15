@@ -11,17 +11,18 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="jarai.tdd3.TestDoubles.Cabrio">
-    <Position X="3.5" Y="4.75" Width="1.75" />
+    <Position X="3.25" Y="3.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Cabrio.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="jarai.tdd3.TestDoubles.MotorStubb">
+  <Class Name="jarai.tdd3.TestDoubles.FakeMotor">
     <Position X="9" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
-      <FileName>MotorStubb.cs</FileName>
+      <FileName>FakeMotor.cs</FileName>
+      <NewMemberFileName>StubbedMotor.cs</NewMemberFileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>

@@ -11,3 +11,14 @@
 - ***This double loop continues till the feature test turns green***
 ![](AcceptanceTestLoops.jpg)
 
+## Aufgabe
+- Erstellen Sie einen roten Acceptance Test für die Klasse Konto, der folgenden Kontoauszug ausgibt:
+```
+Datum         Betrag     Saldo
+01.01.2023    100,00    100,00
+01.01.2023    -50,00     50,00
+ ```
+- Verwenden Sie hierfür einen Approval Test (nuget Pakete ApprovalTests und ApprovalUtilities)
+- Warum wird der Acceptance Test jetzt rot?
+- Erstellen Sie nacheinander Unit Tests für alle Methoden der Klasse Konto, die Sie benötigen, um den Acceptance Test grün zu bekommen.
+	- Erstellen sie jeweils einen Unit Test und implementieren Sie dann die Methode.

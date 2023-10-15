@@ -1,6 +1,9 @@
 ﻿namespace jarai.tdd3.TestDoubles;
 
-public class MotorStubb : IMotor
+/// <summary>
+///     "Leere" Implementierung von IMotor
+/// </summary>
+public class StubbedMotor : IMotor
 {
     public void Anlassen()
     {

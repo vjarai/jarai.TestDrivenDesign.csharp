@@ -24,4 +24,10 @@
     <ProjectReference Include="..\jarai.tdd2.OutsideInTDD\jarai.tdd2.OutsideInTDD.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="AcceptanceTests\ApprovalTest.KontoauszugTest.approved.txt">
+      <DependentUpon>ApprovalTest.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -3,7 +3,7 @@ using Xunit;
 
 namespace jarai.tdd2.OutsideInTDD.Tests.AcceptanceTests;
 
-public class ApprovalTests
+public class ApprovalTest
 {
     [Fact]
     public void KontoauszugTest()

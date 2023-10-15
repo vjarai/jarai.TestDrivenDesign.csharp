@@ -2,13 +2,15 @@
 
 public class Motor : IMotor
 {
+    public int Drehzahl { get; set; }
+
     public void Anlassen()
     {
-        throw new NotImplementedException();
+        Drehzahl = 1000;
     }
 
     public void Abstellen()
     {
-        throw new NotImplementedException();
+        Drehzahl = 0;
     }
 }

@@ -3,7 +3,7 @@ using Xunit;
 
 namespace jarai.tdd3.TestDoubles.Tests;
 
-public class PkwTestsWithMotorMock
+public class PkwTestsUsingGeneratedMotorMock
 {
     [Fact]
     public void Fahren_startet_Motor()
