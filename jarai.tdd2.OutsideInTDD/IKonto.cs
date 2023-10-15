@@ -3,7 +3,7 @@
 public interface IKonto
 {
     public void Einzahlen(int einzuzahlenderBetrag);
-        
+
     public void Abheben(int auszuzahlenderBetrag);
 
     public string ErstelleKontoauszug();

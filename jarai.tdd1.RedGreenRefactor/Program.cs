@@ -1,10 +1,9 @@
-﻿namespace jarai.tdd1.RedGreenRefactor
+﻿namespace jarai.tdd1.RedGreenRefactor;
+
+internal class Program
 {
-    internal class Program
+    private static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
+        Console.WriteLine("Hello, World!");
     }
 }

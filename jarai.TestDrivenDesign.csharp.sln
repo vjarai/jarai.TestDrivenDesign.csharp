@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd1.refersher", "jarai.tdd1.refersher\jarai.tdd1.refersher.csproj", "{0C6009B7-9925-47DB-877E-4768F0AA3E29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd3.Stubbing", "jarai.tdd1.refersher\jarai.tdd3.Stubbing.csproj", "{0C6009B7-9925-47DB-877E-4768F0AA3E29}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd1.RedGreenRefactor", "jarai.tdd1.RedGreenRefactor\jarai.tdd1.RedGreenRefactor.csproj", "{304B5A9B-C5F0-4215-9087-5A0B5A861A31}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd1.RedGreenRefactor.Tests", "jarai.tdd1.RedGreenRefactor.Tests\jarai.tdd1.RedGreenRefactor.Tests.csproj", "{91F3C518-9428-4712-95CC-FD194B6A8BEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd2.OutsideInTDD", "jarai.tdd2.OutsideInTDD\jarai.tdd2.OutsideInTDD.csproj", "{6FD224A6-3E44-489F-9CEF-1C944AF5DF9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd2.OutsideInTDD", "jarai.tdd2.OutsideInTDD\jarai.tdd2.OutsideInTDD.csproj", "{6FD224A6-3E44-489F-9CEF-1C944AF5DF9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd2.OutsideInTDD.Tests", "jarai.tdd2.OutsideInTDD.Tests\jarai.tdd2.OutsideInTDD.Tests.csproj", "{BE849870-1389-460F-8626-6DDDE3F47F2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd2.OutsideInTDD.Tests", "jarai.tdd2.OutsideInTDD.Tests\jarai.tdd2.OutsideInTDD.Tests.csproj", "{BE849870-1389-460F-8626-6DDDE3F47F2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd3.Stubbing.Tests", "jarai.tdd3.Stubbing.Tests\jarai.tdd3.Stubbing.Tests.csproj", "{D6D05F54-55DD-437E-84DF-F89314FEB19C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{BE849870-1389-460F-8626-6DDDE3F47F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE849870-1389-460F-8626-6DDDE3F47F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE849870-1389-460F-8626-6DDDE3F47F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D05F54-55DD-437E-84DF-F89314FEB19C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D05F54-55DD-437E-84DF-F89314FEB19C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D05F54-55DD-437E-84DF-F89314FEB19C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D05F54-55DD-437E-84DF-F89314FEB19C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

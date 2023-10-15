@@ -1,10 +1,9 @@
-﻿namespace jarai.tdd1.refersher
+﻿namespace jarai.tdd3.Stubbing;
+
+internal class Program
 {
-    internal class Program
+    private static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
+        Console.WriteLine("Hello, World!");
     }
 }

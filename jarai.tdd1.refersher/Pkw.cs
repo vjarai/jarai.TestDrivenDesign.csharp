@@ -1,11 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿namespace jarai.tdd3.Stubbing;
 
-namespace jarai.tdd1.refersher
+public class Pkw
 {
-    public class Pkw
+    public IMotor _motor;
+
+    public Pkw(IMotor motor)
     {
+        _motor = motor;
+    }
+
+    public double Tachostand { get; private set; }
+
+    public void Fahren(double strecke)
+    {
+        _motor.Anlassen();
+
+        Tachostand += strecke;
+
+        _motor.Abstellen();
     }
 }

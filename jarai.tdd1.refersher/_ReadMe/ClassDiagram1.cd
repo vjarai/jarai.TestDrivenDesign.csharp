@@ -1,25 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="jarai.tdd1.refersher.Pkw">
-    <Position X="7" Y="2.75" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="jarai.tdd3.Stubbing.Pkw">
+    <Position X="3" Y="1" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAIAAAQAAAAAAAA=</HashCode>
       <FileName>Pkw.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_motor" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="jarai.tdd1.refersher.Motor">
-    <Position X="11.5" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
-      <FileName>Motor.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="jarai.tdd1.refersher.Cabrio">
-    <Position X="8.75" Y="5.25" Width="1.5" />
+  <Class Name="jarai.tdd3.Stubbing.Cabrio">
+    <Position X="3.5" Y="4.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Cabrio.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="jarai.tdd3.Stubbing.StubbedMotor">
+    <Position X="9" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>StubbedMotor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="jarai.tdd3.Stubbing.Motor">
+    <Position X="7" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Motor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="jarai.tdd3.Stubbing.IMotor">
+    <Position X="7.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>IMotor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

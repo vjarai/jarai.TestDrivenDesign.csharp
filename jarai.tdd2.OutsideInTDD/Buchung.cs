@@ -2,16 +2,15 @@
 
 internal class Buchung
 {
-    public double Amount { get; }
-
-    public string Date { get; }
-
-
     public Buchung(double amount, string date)
     {
         Amount = amount;
         Date = date;
     }
+
+    public double Amount { get; }
+
+    public string Date { get; }
 
     public override string ToString()
     {
