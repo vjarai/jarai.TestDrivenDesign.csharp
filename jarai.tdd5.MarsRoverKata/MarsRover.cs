@@ -17,23 +17,18 @@ public class MarsRover
         var east = new Direction(new Position(1, 0), "E");
         var west = new Direction(new Position(-1, 0), "W");
 
-        north.LeftDirection = west;
-        north.RightDirection = east;
-
-        south.LeftDirection = east;
-        south.RightDirection = west;
-
-        east.LeftDirection = north;
-        east.RightDirection = south;
-
-        west.LeftDirection = south;
-        west.RightDirection = north;
+        north.RightDirection = south.LeftDirection = east;
+        north.LeftDirection = south.RightDirection = west;
+        east.RightDirection = west.LeftDirection = south;
+        east.LeftDirection = west.RightDirection = north;
 
         _currentDirection = north;
     }
 
     public string ExecuteCommands(string commands)
     {
+        var obstacle = "";
+
         foreach (char command in commands)
             switch (command)
             {
@@ -41,7 +36,9 @@ public class MarsRover
 
                     var newPosition = _currentPosition.CalculateNextPosition(_currentDirection);
 
-                    if (!_grid.HasObstacle(newPosition))
+                    if (_grid.HasObstacle(newPosition))
+                        obstacle = "O:";
+                    else
                         _currentPosition = newPosition;
 
                     break;
@@ -58,6 +55,6 @@ public class MarsRover
                     throw new ArgumentException($"Unknown command: {command}");
             }
 
-        return $"{_currentPosition}:{_currentDirection}";
+        return $"{obstacle}{_currentPosition}:{_currentDirection}";
     }
 }

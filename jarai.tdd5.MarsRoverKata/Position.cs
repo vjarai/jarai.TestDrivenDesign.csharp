@@ -2,6 +2,7 @@
 
 public class Position
 {
+    private const int Max = 10;
     private readonly int _x;
     private readonly int _y;
 
@@ -13,7 +14,7 @@ public class Position
 
     public static Position operator +(Position lhs, Position rhs)
     {
-        return new Position(lhs._x + rhs._x, lhs._y + rhs._y);
+        return new Position((lhs._x + rhs._x) % Max, (lhs._y + rhs._y) % Max);
     }
 
     public override bool Equals(object obj)

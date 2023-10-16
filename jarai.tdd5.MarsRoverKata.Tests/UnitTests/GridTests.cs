@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
-namespace jarai.tdd5.MarsRoverKata.Tests;
+namespace jarai.tdd5.MarsRoverKata.Tests.UnitTests;
 
-[TestClass]
 public class GridTests
 {
-    [TestMethod]
+    [Fact]
     public void HasObstacleTest()
     {
         // Arrange
@@ -16,6 +15,6 @@ public class GridTests
         bool actual = target.HasObstacle(new Position(0, 0));
 
         // Assert
-        Assert.IsTrue(actual);
+        Assert.True(actual);
     }
 }
