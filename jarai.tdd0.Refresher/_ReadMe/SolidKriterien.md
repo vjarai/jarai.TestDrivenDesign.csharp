@@ -1,10 +1,10 @@
 ﻿https://t3n.de/news/prinzipien-software-entwicklung-solid-615556/
 
-# S“ wie „Single-Responsibility-Prinzip“ 
+# „S“ wie „Single-Responsibility-Prinzip“ 
 
 ***„Es sollte nie mehr als einen Grund dafür geben, eine Klasse zu ändern.“ Robert C. Martin***
 	
-Die Kernaussage des Prinzips ist, dass jede Klasse und jede Methode nur genau eine fest definierte Aufgabe zu erfüllen hat. Wenn eine Klasse mehrere Verantwortungen zu tragen hat, führt das zu Schwierigkeiten bei zukünftigen Änderungen und das Fehlerrisiko steigt. Eine hohe Kohäsion – also alle Methoden innerhalb einer Klassen haben einen starken gemeinsamen Bezug – sollte angestrebt werden.
+Die Kernaussage des Prinzips ist, dass jede Klasse (und jede Methode) nur genau eine fest definierte Aufgabe zu erfüllen hat. Wenn eine Klasse mehrere Verantwortungen zu tragen hat, führt das zu Schwierigkeiten bei zukünftigen Änderungen und das Fehlerrisiko steigt. Eine hohe Kohäsion – also alle Methoden innerhalb einer Klassen haben einen starken gemeinsamen Bezug – sollte angestrebt werden.
 	
 # „O“ wie „Open-Closed-Prinzip“
 	

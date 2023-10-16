@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd3.TestDoubles.Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd0.Refresher", "jarai.tdd0.Refresher\jarai.tdd0.Refresher.csproj", "{05695A53-B681-4040-A2E7-0132E60E59B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd4.DependencyInjection.DIY", "jarai.tdd4.DependencyInjection.DIY\jarai.tdd4.DependencyInjection.DIY.csproj", "{FBD75E9C-16C7-4A84-B487-938DEC0A4B63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd4.DependencyInjection.NetCore", "jarai.tdd4.DependencyInjection.NetCore\jarai.tdd4.DependencyInjection.NetCore.csproj", "{9B7C8512-1C7A-49DE-BFE3-1F4D3F1DDCDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{05695A53-B681-4040-A2E7-0132E60E59B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05695A53-B681-4040-A2E7-0132E60E59B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05695A53-B681-4040-A2E7-0132E60E59B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBD75E9C-16C7-4A84-B487-938DEC0A4B63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBD75E9C-16C7-4A84-B487-938DEC0A4B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBD75E9C-16C7-4A84-B487-938DEC0A4B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBD75E9C-16C7-4A84-B487-938DEC0A4B63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B7C8512-1C7A-49DE-BFE3-1F4D3F1DDCDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B7C8512-1C7A-49DE-BFE3-1F4D3F1DDCDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B7C8512-1C7A-49DE-BFE3-1F4D3F1DDCDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B7C8512-1C7A-49DE-BFE3-1F4D3F1DDCDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

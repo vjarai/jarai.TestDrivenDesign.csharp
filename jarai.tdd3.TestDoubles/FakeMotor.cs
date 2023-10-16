@@ -3,7 +3,7 @@
 namespace jarai.tdd3.TestDoubles;
 
 /// <summary>
-///     "Fake" Implementierung von IMotor
+///     "Fake" Implementierung von IMotor (z.B. zum Debuggen)
 /// </summary>
 public class FakeMotor : IMotor
 {

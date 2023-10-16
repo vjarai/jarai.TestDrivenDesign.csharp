@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="jarai.tdd4.DependencyInjection.DIY.Application.Applikation">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Application\Applikation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UserInterface" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="jarai.tdd4.DependencyInjection.DIY.Application.Bestellservice">
+    <Position X="12.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Application\Bestellservice.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Logger" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="jarai.tdd4.DependencyInjection.DIY.Application.Buchhaltung">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAIAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Application\Buchhaltung.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_factory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="jarai.tdd4.DependencyInjection.DIY.Application.KontoFactory">
+    <Position X="12.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Application\KontoFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd4.DependencyInjection.DIY.Application.Lagerverwaltung">
+    <Position X="9" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Application\Lagerverwaltung.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Bestellservice" />
+      <Property Name="Versandservice" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="jarai.tdd4.DependencyInjection.DIY.Application.UserInterface">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Application\UserInterface.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ViewModel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="jarai.tdd4.DependencyInjection.DIY.Application.Versandservice">
+    <Position X="12.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Application\Versandservice.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Logger" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="jarai.tdd4.DependencyInjection.DIY.Application.ViewModel">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Application\ViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Buchhaltung" />
+      <Property Name="Lagerverwaltung" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="jarai.tdd4.DependencyInjection.DIY.Logging.ILogger" Collapsed="true">
+    <Position X="15" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Logging\ILogger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

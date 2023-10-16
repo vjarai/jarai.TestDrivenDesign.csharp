@@ -23,4 +23,8 @@
     <ProjectReference Include="..\jarai.tdd3.TestDoubles\jarai.tdd3.TestDoubles.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="_ReadMe\" />
+  </ItemGroup>
+
 </Project>
