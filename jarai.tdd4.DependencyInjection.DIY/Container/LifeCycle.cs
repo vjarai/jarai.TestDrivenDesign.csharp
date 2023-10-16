@@ -1,8 +1,7 @@
-﻿namespace jarai.tdd4.DependencyInjection.DIY.Container
+﻿namespace jarai.tdd4.DependencyInjection.DIY.Container;
+
+public enum LifeCycle
 {
-    public enum LifeCycle
-    {
-        Transient,
-        Singleton
-    }
+    Transient,
+    Singleton
 }

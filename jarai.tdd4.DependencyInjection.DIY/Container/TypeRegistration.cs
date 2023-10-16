@@ -1,24 +1,23 @@
-﻿namespace jarai.tdd4.DependencyInjection.DIY.Container
+﻿namespace jarai.tdd4.DependencyInjection.DIY.Container;
+
+public class TypeRegistration
 {
-    public class TypeRegistration
+    public TypeRegistration(Type registeredType, Type concreteType, LifeCycle lifeCycle)
     {
-        public TypeRegistration(Type registeredType, Type concreteType, LifeCycle lifeCycle)
-        {
-            RegisteredType = registeredType;
-            ConcreteType = concreteType;
-            LifeCycle = lifeCycle;
-        }
+        RegisteredType = registeredType;
+        ConcreteType = concreteType;
+        LifeCycle = lifeCycle;
+    }
 
-        public Type ConcreteType { get; set; }
+    public Type ConcreteType { get; set; }
 
-        public object Instance { get; set; }
-        public LifeCycle LifeCycle { get; set; }
-        public Type RegisteredType { get; set; }
+    public object Instance { get; set; }
+    public LifeCycle LifeCycle { get; set; }
+    public Type RegisteredType { get; set; }
 
-        public object CreateInstance(object[] args)
-        {
-            Instance = Activator.CreateInstance(ConcreteType, args);
-            return Instance;
-        }
+    public object CreateInstance(object[] args)
+    {
+        Instance = Activator.CreateInstance(ConcreteType, args);
+        return Instance;
     }
 }

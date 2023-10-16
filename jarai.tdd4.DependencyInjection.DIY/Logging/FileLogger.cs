@@ -1,17 +1,15 @@
 ﻿using System.Diagnostics;
 
-namespace jarai.tdd4.DependencyInjection.DIY.Logging
+namespace jarai.tdd4.DependencyInjection.DIY.Logging;
+
+public class FileLogger : ILogger
 {
-    public class FileLogger : ILogger
+    public FileLogger()
     {
-        public void Write(string msg)
-        {
+        Debug.WriteLine("Logger Instanz erstellt.");
+    }
 
-        }
-
-        public FileLogger()
-        {
-            Debug.WriteLine("Logger Instanz erstellt.");
-        }
+    public void Write(string msg)
+    {
     }
 }

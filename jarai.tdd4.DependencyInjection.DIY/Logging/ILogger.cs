@@ -1,7 +1,6 @@
-﻿namespace jarai.tdd4.DependencyInjection.DIY.Logging
+﻿namespace jarai.tdd4.DependencyInjection.DIY.Logging;
+
+public interface ILogger
 {
-    public interface ILogger
-    {
-        void Write(string msg);
-    }
+    void Write(string msg);
 }
