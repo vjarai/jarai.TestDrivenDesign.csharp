@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\jarai.tdd1.refersher\jarai.tdd3.TestDoubles.csproj" />
+    <ProjectReference Include="..\jarai.tdd3.TestDoubles\jarai.tdd3.TestDoubles.csproj" />
   </ItemGroup>
 
 </Project>

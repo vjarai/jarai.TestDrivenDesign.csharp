@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Ostrich kann nicht fliegen =&gt;&#xD;&#xA;Ostrich.Fly() wirft eine Exception!">
+    <Position X="6.141" Y="3.932" Height="0.75" Width="2.492" />
+  </Comment>
+  <Class Name="jarai.tdd0.Refresher.SolidIgnorant.Bird">
+    <Position X="3.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAA=</HashCode>
+      <FileName>SolidIgnorant\LiskovViolation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd0.Refresher.SolidIgnorant.Robin">
+    <Position X="2" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAA=</HashCode>
+      <FileName>SolidIgnorant\LiskovViolation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd0.Refresher.SolidIgnorant.Ostrich">
+    <Position X="4.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAA=</HashCode>
+      <FileName>SolidIgnorant\LiskovViolation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
