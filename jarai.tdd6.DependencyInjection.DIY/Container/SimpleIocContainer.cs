@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace jarai.tdd5.DependencyInjection.DIY.Container;
+namespace jarai.tdd6.DependencyInjection.DIY.Container;
 
 /// <summary>
 ///     Ein einfacher "Eigenbau" IoC Container (nur als "Proof of Concept")

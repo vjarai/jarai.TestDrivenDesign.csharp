@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace jarai.tdd5.DependencyInjection.DIY.Logging;
+namespace jarai.tdd6.DependencyInjection.DIY.Logging;
 
 public class ConsoleLogger : ILogger
 {

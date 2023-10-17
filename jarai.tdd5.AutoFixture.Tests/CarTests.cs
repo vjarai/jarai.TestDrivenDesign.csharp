@@ -1,7 +1,7 @@
 ﻿using AutoFixture;
 using Xunit;
 
-namespace jarai.tdd6.AutoFixture.Tests;
+namespace jarai.tdd5.AutoFixture.Tests;
 
 public class CarTests
 {

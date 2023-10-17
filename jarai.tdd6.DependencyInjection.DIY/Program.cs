@@ -1,8 +1,8 @@
-﻿using jarai.tdd5.DependencyInjection.DIY.Application;
-using jarai.tdd5.DependencyInjection.DIY.Container;
-using jarai.tdd5.DependencyInjection.DIY.Logging;
+﻿using jarai.tdd6.DependencyInjection.DIY.Application;
+using jarai.tdd6.DependencyInjection.DIY.Container;
+using jarai.tdd6.DependencyInjection.DIY.Logging;
 
-namespace jarai.tdd5.DependencyInjection.DIY;
+namespace jarai.tdd6.DependencyInjection.DIY;
 
 internal class Program
 {

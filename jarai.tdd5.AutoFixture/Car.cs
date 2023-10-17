@@ -1,4 +1,4 @@
-﻿namespace jarai.tdd6.AutoFixture;
+﻿namespace jarai.tdd5.AutoFixture;
 
 public class Car
 {

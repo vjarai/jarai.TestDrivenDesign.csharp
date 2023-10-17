@@ -1,4 +1,4 @@
-﻿namespace jarai.tdd5.DependencyInjection.DIY.Container;
+﻿namespace jarai.tdd6.DependencyInjection.DIY.Container;
 
 public class TypeRegistration
 {

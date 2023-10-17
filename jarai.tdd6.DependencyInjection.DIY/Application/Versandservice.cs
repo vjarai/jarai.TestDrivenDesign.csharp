@@ -1,6 +1,6 @@
-﻿using jarai.tdd5.DependencyInjection.DIY.Logging;
+﻿using jarai.tdd6.DependencyInjection.DIY.Logging;
 
-namespace jarai.tdd5.DependencyInjection.DIY.Application;
+namespace jarai.tdd6.DependencyInjection.DIY.Application;
 
 public class Versandservice
 {

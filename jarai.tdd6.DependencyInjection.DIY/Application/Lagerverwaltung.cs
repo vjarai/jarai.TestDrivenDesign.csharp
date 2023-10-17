@@ -1,4 +1,4 @@
-﻿namespace jarai.tdd5.DependencyInjection.DIY.Application;
+﻿namespace jarai.tdd6.DependencyInjection.DIY.Application;
 
 public class Lagerverwaltung
 {

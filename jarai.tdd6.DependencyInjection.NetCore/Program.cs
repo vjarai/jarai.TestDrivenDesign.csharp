@@ -1,9 +1,9 @@
-﻿using jarai.tdd5.DependencyInjection.DIY.Application;
-using jarai.tdd5.DependencyInjection.DIY.Logging;
+﻿using jarai.tdd6.DependencyInjection.DIY.Application;
+using jarai.tdd6.DependencyInjection.DIY.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace jarai.tdd5.DependencyInjection.NetCore;
+namespace jarai.tdd6.DependencyInjection.NetCore;
 
 internal class Program
 {

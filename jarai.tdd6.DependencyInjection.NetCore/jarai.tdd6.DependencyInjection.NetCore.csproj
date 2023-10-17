@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\jarai.tdd5.DependencyInjection.DIY\jarai.tdd5.DependencyInjection.DIY.csproj" />
+    <ProjectReference Include="..\jarai.tdd6.DependencyInjection.DIY\jarai.tdd6.DependencyInjection.DIY.csproj" />
   </ItemGroup>
 
 </Project>
