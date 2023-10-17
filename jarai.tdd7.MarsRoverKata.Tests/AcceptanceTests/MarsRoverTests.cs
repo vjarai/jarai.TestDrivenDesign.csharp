@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace jarai.tdd6.MarsRoverKata.Tests.AcceptanceTests;
+namespace jarai.tdd7.MarsRoverKata.Tests.AcceptanceTests;
 
 public class MarsRoverTests
 {

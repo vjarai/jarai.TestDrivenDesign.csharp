@@ -26,7 +26,7 @@ In this API, the plateau is represented as a 10x10 grid, and a rover has state c
 The input to the program is a string of one-character move commands:
 
 L and R rotate the direction the rover is facing
-M moves the rover one grid square forward in the direction it is currently facing
+M moves the rover one grid square forward in the direction it is currently facing.
 If a rover reaches the end of the plateau, it wraps around the end of the grid.
 
 ## Output
@@ -49,7 +49,7 @@ A public interface to the API could look something like this:
 ```
 class MarsRover {
     public MarsRover(Grid grid);
-    public String execute(String command);
+    public String ExecuteCommands(String command);
 }
 ```
 

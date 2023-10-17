@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace jarai.tdd6.MarsRoverKata.Tests.UnitTests;
+namespace jarai.tdd7.MarsRoverKata.Tests.UnitTests;
 
 public class GridTests
 {

@@ -1,4 +1,4 @@
-﻿namespace jarai.tdd6.MarsRoverKata;
+﻿namespace jarai.tdd7.MarsRoverKata;
 
 public class Direction
 {
