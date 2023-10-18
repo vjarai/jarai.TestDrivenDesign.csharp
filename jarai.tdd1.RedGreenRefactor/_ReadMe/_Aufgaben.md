@@ -1,7 +1,17 @@
-﻿# Übung 1: Red => Green => Refactor
+﻿# Test Driven Design
+
+## TDD usually follows the "Red-Green-Refactor" cycle:
+
+- Add a test to the test suite
+- (Red) Run all the tests to ensure the new test fails
+- (Green) Write just enough code to get that single test to pass
+- Run all tests
+- (Refactor) Improve the initial code while keeping the tests green
+- Repeat
+![](tdd.png)
 
 
-## Das FizzBuzz Spiel
+## Übung: Das FizzBuzz Spiel
 ![](image.png)
 [FizzBuzz Kata](https://yoan-thirion.gitbook.io/knowledge-base/software-craftsmanship/code-katas/tdd-katas/fizzbuzz)<p>
 - Für Vielfache von 3 ist das Ergebnis "Fizz"

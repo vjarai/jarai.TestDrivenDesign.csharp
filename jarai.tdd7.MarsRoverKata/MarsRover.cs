@@ -6,23 +6,19 @@ public class MarsRover
 
     private Direction _currentDirection;
 
-    private Position _currentPosition = new(0, 0);
+    private Position _currentPosition;
 
-    public MarsRover(Grid grid)
+    public MarsRover()
+    : this(new Grid(), new Position(0, 0), Direction.North)
+    {
+
+    }
+
+    public MarsRover(Grid grid, Position startPosition, Direction startDirection)
     {
         _grid = grid;
-
-        var north = new Direction(new Position(0, 1), "N");
-        var south = new Direction(new Position(0, -1), "S");
-        var east = new Direction(new Position(1, 0), "E");
-        var west = new Direction(new Position(-1, 0), "W");
-
-        north.RightDirection = south.LeftDirection = east;
-        north.LeftDirection = south.RightDirection = west;
-        east.RightDirection = west.LeftDirection = south;
-        east.LeftDirection = west.RightDirection = north;
-
-        _currentDirection = north;
+        _currentPosition = startPosition;
+        _currentDirection = startDirection;
     }
 
     public string ExecuteCommands(string commands)

@@ -8,7 +8,7 @@ public class MarsRoverTests
     public void ExecuteCommands_M_should_0_1_N()
     {
         // Arrange
-        var target = new MarsRover(new Grid());
+        var target = new MarsRover();
 
         // Act
         string actual = target.ExecuteCommands("M");
@@ -23,7 +23,7 @@ public class MarsRoverTests
     public void ExecuteCommands_MMMMMMMMMM_should_0_0_N()
     {
         // Arrange
-        var target = new MarsRover(new Grid());
+        var target = new MarsRover();
 
         // Act
         string actual = target.ExecuteCommands("MMMMMMMMMM");
@@ -37,7 +37,7 @@ public class MarsRoverTests
     public void ExecuteCommands_MMRMMLM_should_2_3_N()
     {
         // Arrange
-        var target = new MarsRover(new Grid());
+        var target = new MarsRover();
 
         // Act
         string actual = target.ExecuteCommands("MMRMMLM");
@@ -54,7 +54,7 @@ public class MarsRoverTests
         var grid = new Grid();
         grid.AddObstacle(new Position(0, 3));
 
-        var target = new MarsRover(grid);
+        var target = new MarsRover(grid, new Position(0, 0), Direction.North);
 
         // Act
         string actual = target.ExecuteCommands("MMMM");
