@@ -1,4 +1,6 @@
-﻿namespace jarai.tdd7.MarsRoverKata;
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace jarai.tdd7.MarsRoverKata;
 
 public class MarsRover
 {
@@ -7,6 +9,8 @@ public class MarsRover
     private Direction _currentDirection;
 
     private Position _currentPosition;
+
+    public Action<string> Logger { get; set; } = new(_ => { });
 
     public MarsRover()
     : this(new Grid(), new Position(0, 0), Direction.North)
@@ -23,9 +27,11 @@ public class MarsRover
 
     public string ExecuteCommands(string commands)
     {
-        var obstacle = "";
+        string obstacle = "";
+        string result = "";
 
         foreach (char command in commands)
+        {
             switch (command)
             {
                 case 'M':
@@ -51,6 +57,10 @@ public class MarsRover
                     throw new ArgumentException($"Unknown command: {command}");
             }
 
-        return $"{obstacle}{_currentPosition}:{_currentDirection}";
+            result = $"{obstacle}{_currentPosition}:{_currentDirection}";
+            Logger(result);
+        }
+
+        return result;
     }
 }
