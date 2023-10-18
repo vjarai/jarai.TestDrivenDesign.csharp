@@ -1,6 +1,9 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿using System.Runtime.CompilerServices;
+
+
 
 namespace jarai.tdd7.MarsRoverKata;
+
 
 public class MarsRover
 {
@@ -38,7 +41,7 @@ public class MarsRover
 
                 case 'M':
                     // Move one Step
-                    var nextPosition = _currentPosition.CalculateNextPosition(_currentDirection);
+                    var nextPosition = CalculateNextPosition();
 
                     obstacleDetected = _grid.HasObstacle(nextPosition);
 
@@ -66,5 +69,10 @@ public class MarsRover
         }
 
         return result;
+    }
+
+    internal Position CalculateNextPosition()
+    {
+        return _currentPosition + _currentDirection.NextPositionOffset;
     }
 }

@@ -25,10 +25,7 @@ public class Position
         return false;
     }
 
-    public Position CalculateNextPosition(Direction direction)
-    {
-        return this + direction.NextPositionOffset;
-    }
+    
 
     public override string ToString()
     {

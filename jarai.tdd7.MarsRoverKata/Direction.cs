@@ -25,8 +25,8 @@ public class Direction
     }
 
     public Position NextPositionOffset { get; private set; }
-    public Direction LeftDirection { get; set; }
-    public Direction RightDirection { get; set; }
+    public Direction LeftDirection { get; private set; }
+    public Direction RightDirection { get; private set; }
 
     public static Direction North { get; }
 
