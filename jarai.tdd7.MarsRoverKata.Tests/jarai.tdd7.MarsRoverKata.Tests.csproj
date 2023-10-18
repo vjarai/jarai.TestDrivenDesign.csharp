@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\jarai.tdd6.MarsRoverKata\jarai.tdd7.MarsRoverKata.csproj" />
     <ProjectReference Include="..\jarai.tdd7.MarsRoverKata\jarai.tdd7.MarsRoverKata.csproj" />
   </ItemGroup>
 

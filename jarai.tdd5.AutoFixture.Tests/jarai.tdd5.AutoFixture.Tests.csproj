@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\jarai.tdd5.AutoFixture\jarai.tdd5.AutoFixture.csproj" />
-    <ProjectReference Include="..\jarai.tdd6.AutoFixture\jarai.tdd5.AutoFixture.csproj" />
   </ItemGroup>
 
 </Project>
