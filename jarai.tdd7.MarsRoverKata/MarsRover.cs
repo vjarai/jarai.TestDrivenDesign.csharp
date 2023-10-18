@@ -27,29 +27,33 @@ public class MarsRover
 
     public string ExecuteCommands(string commands)
     {
-        string obstacle = "";
         string result = "";
 
         foreach (char command in commands)
         {
-            switch (command)
+          bool obstacleDetected = false;
+
+          switch (command)
             {
+
                 case 'M':
+                    // Move one Step
+                    var nextPosition = _currentPosition.CalculateNextPosition(_currentDirection);
 
-                    var newPosition = _currentPosition.CalculateNextPosition(_currentDirection);
+                    obstacleDetected = _grid.HasObstacle(nextPosition);
 
-                    if (_grid.HasObstacle(newPosition))
-                        obstacle = "O:";
-                    else
-                        _currentPosition = newPosition;
+                    if (!obstacleDetected)
+                        _currentPosition = nextPosition;
 
                     break;
 
                 case 'L':
+                    // Turn Left
                     _currentDirection = _currentDirection.LeftDirection;
                     break;
 
                 case 'R':
+                    // Turn Right
                     _currentDirection = _currentDirection.RightDirection;
                     break;
 
@@ -57,8 +61,8 @@ public class MarsRover
                     throw new ArgumentException($"Unknown command: {command}");
             }
 
-            result = $"{obstacle}{_currentPosition}:{_currentDirection}";
-            Logger(result);
+            result = $"{(obstacleDetected?"O:":"")}{_currentPosition}:{_currentDirection}";
+            Logger($"{command} => {result}");
         }
 
         return result;

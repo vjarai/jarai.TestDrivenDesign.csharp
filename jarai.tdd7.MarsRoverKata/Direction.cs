@@ -2,7 +2,7 @@
 
 public class Direction
 {
-    private readonly string _kompass;
+    private readonly string _kompassDirection;
 
 
     static Direction()
@@ -18,10 +18,10 @@ public class Direction
         East.LeftDirection = West.RightDirection = North;
     }
 
-    public Direction(Position nextPositionOffset, string kompass)
+    public Direction(Position nextPositionOffset, string kompassDirection)
     {
         NextPositionOffset = nextPositionOffset;
-        _kompass = kompass;
+        _kompassDirection = kompassDirection;
     }
 
     public Position NextPositionOffset { get; private set; }
@@ -38,6 +38,6 @@ public class Direction
 
     public override string ToString()
     {
-        return _kompass;
+        return _kompassDirection;
     }
 }

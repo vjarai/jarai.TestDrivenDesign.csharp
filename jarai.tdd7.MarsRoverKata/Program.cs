@@ -12,7 +12,7 @@ public class Program
             Logger = Console.WriteLine
         };
 
-        marsRover.ExecuteCommands("MMMM");
+        marsRover.ExecuteCommands("MMMMRMLMMLMRM");
 
     }
 }
