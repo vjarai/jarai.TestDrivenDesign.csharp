@@ -40,10 +40,10 @@ public class CurrencyConverterTests
         changeRateService.Setup(x => x.GetChangeRate(It.IsAny<string>(), It.IsAny<string>()))
             .Throws(new ArgumentException("Invalid currency"));
 
-        var currencyConverter = new CurrencyConverter(changeRateService.Object);
+        var target = new CurrencyConverter(changeRateService.Object);
 
         // Act
-        var exception = Record.Exception(() => currencyConverter.Convert("<unknown>", "<unknown>", 1.0));
+        var exception = Record.Exception(() => target.Convert("<unknown>", "<unknown>", 1.0));
 
         // Assert
         Assert.IsType<ArgumentException>(exception);
