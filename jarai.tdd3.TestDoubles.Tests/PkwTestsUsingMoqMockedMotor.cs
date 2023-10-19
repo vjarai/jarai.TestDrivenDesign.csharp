@@ -10,8 +10,6 @@ public class PkwTestsUsingMoqMockedMotor
     {
         // Arrange
         var motorMock = new Mock<IMotor>(); // Generate mocked motor
-        motorMock.Setup(m => m.Anlassen()); // Set Expectation
-
         var target = new Pkw(motorMock.Object); // Inject mocked motor
 
         // Act
@@ -26,8 +24,6 @@ public class PkwTestsUsingMoqMockedMotor
     {
         // Arrange
         var motorMock = new Mock<IMotor>();
-        motorMock.Setup(m => m.Abstellen());
-
         var target = new Pkw(motorMock.Object);
 
         // Act
