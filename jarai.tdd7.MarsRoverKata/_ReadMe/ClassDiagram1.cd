@@ -3,19 +3,19 @@
   <Class Name="jarai.tdd7.MarsRoverKata.MarsRover">
     <Position X="1.5" Y="3.75" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AIAAAAAAAAIAAAAAAIAAAAAIIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AMAAAAAAAAIAAAAAAIAAAAAIIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MarsRover.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="_grid" />
-      <Field Name="_currentPosition" />
       <Field Name="_currentDirection" />
+      <Field Name="_currentPosition" />
     </ShowAsAssociation>
   </Class>
   <Class Name="jarai.tdd7.MarsRoverKata.Position">
     <Position X="6.5" Y="2.5" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAAAIABQAAAAEwAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAIABQAAAAEwAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Position.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -35,6 +35,12 @@
       <HashCode>AACAAAAAAEAAAAAEAAAAIAAAEAAAAAAAAABAAAABAAQ=</HashCode>
       <FileName>Direction.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="South" />
+      <Property Name="North" />
+      <Property Name="East" />
+      <Property Name="West" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
