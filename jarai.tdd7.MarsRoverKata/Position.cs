@@ -3,24 +3,24 @@
 public class Position
 {
     private const int Max = 10;
-    private readonly int _x;
-    private readonly int _y;
+    public int X { get; set; }
+    public int Y { get; set; }
 
     public Position(int x, int y)
     {
-        _x = x;
-        _y = y;
+        X = x % 10;
+        Y = y % 10;
     }
 
     public static Position operator +(Position lhs, Position rhs)
     {
-        return new Position((lhs._x + rhs._x) % Max, (lhs._y + rhs._y) % Max);
+        return new Position((lhs.X + rhs.X) % Max, (lhs.Y + rhs.Y) % Max);
     }
 
     public override bool Equals(object obj)
     {
         if (obj is Position other)
-            return _x == other._x && _y == other._y;
+            return X == other.X && Y == other.Y;
 
         return false;
     }
@@ -29,6 +29,6 @@ public class Position
 
     public override string ToString()
     {
-        return $"{_x}:{_y}";
+        return $"{X}:{Y}";
     }
 }

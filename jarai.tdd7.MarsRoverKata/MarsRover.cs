@@ -16,7 +16,7 @@ public class MarsRover
     public Action<string> Logger { get; set; } = new(_ => { });
 
     public MarsRover()
-    : this(new Grid(), new Position(0, 0), Direction.North)
+    : this(new Grid(), new Position(0, 0), new NorthDirection())
     {
 
     }
@@ -52,12 +52,12 @@ public class MarsRover
 
                 case 'L':
                     // Turn Left
-                    _currentDirection = _currentDirection.LeftDirection;
+                    _currentDirection = _currentDirection.TurnLeft();
                     break;
 
                 case 'R':
                     // Turn Right
-                    _currentDirection = _currentDirection.RightDirection;
+                    _currentDirection = _currentDirection.TurnRight();
                     break;
 
                 default:
@@ -73,6 +73,6 @@ public class MarsRover
 
     internal Position CalculateNextPosition()
     {
-        return _currentPosition + _currentDirection.NextPositionOffset;
+        return  _currentDirection.GetNextPosition(_currentPosition);
     }
 }

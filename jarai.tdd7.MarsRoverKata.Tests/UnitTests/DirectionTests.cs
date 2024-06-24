@@ -7,51 +7,59 @@ public class DirectionTests
     [Fact]
     public void Left_of_North_should_West()
     {
-        Assert.Equal(Direction.North.LeftDirection, Direction.West);
+        var sut = new NorthDirection();
+        Assert.IsType<WestDirection>(sut.TurnLeft());
     }
 
     [Fact]
     public void Right_of_North_should_East()
     {
-        Assert.Equal(Direction.North.RightDirection, Direction.East);
+       var sut = new NorthDirection();
+        Assert.IsType<EastDirection>(sut.TurnRight());
     }
 
 
     [Fact]
     public void Left_of_East_should_North()
     {
-        Assert.Equal(Direction.East.LeftDirection, Direction.North);
+        var sut = new EastDirection();
+        Assert.IsType<NorthDirection>(sut.TurnLeft());
     }
 
     [Fact]
     public void Right_of_East_should_South()
     {
-        Assert.Equal(Direction.East.RightDirection, Direction.South);
+       var sut = new EastDirection();
+        Assert.IsType<SouthDirection>(sut.TurnRight());
     }
 
 
     [Fact]
     public void Left_of_West_should_South()
     {
-        Assert.Equal(Direction.West.LeftDirection, Direction.South);
+        var sut = new WestDirection();
+        Assert.IsType<SouthDirection>(sut.TurnLeft());
     }
 
     [Fact]
     public void Right_of_West_should_North()
     {
-        Assert.Equal(Direction.West.RightDirection, Direction.North);
+        var sut = new WestDirection();
+        Assert.IsType<NorthDirection>(sut.TurnRight());
     }
 
 
     [Fact]
     public void Left_of_South_should_East()
     {
-        Assert.Equal(Direction.South.LeftDirection, Direction.East);
+        var sut = new SouthDirection();
+        Assert.IsType<EastDirection>(sut.TurnLeft());
     }
 
     [Fact]
     public void Right_of_South_should_West()
     {
-        Assert.Equal(Direction.South.RightDirection, Direction.West);
+       var sut = new SouthDirection();
+        Assert.IsType<WestDirection>(sut.TurnRight());
     }
 }
