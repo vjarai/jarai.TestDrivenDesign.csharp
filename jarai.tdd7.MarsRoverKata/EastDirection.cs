@@ -7,15 +7,15 @@ namespace jarai.tdd7.MarsRoverKata
 {
     public class EastDirection : Direction
     {
-        public static readonly EastDirection Instance = new EastDirection();
+        public static EastDirection Instance { get; } = new EastDirection();
 
         private EastDirection() : base("E")
         {
         }
 
-        public override Position GetNextPosition(Position position)
+        public override Position Move(Position currentPosition)
         {
-            return new Position(position.X + 1, position.Y);
+            return new Position(currentPosition.X + 1, currentPosition.Y);
         }
 
         public override Direction TurnLeft()

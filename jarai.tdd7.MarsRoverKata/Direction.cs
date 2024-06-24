@@ -2,21 +2,21 @@
 
 public abstract class Direction
 {
-    private readonly string _kompassDirection;
+    private readonly string _name;
 
 
-    protected Direction( string kompassDirection)
+    protected Direction( string name)
     {
-        _kompassDirection = kompassDirection;
+        _name = name;
     }
 
 
     public override string ToString()
     {
-        return _kompassDirection;
+        return _name;
     }
 
-    public abstract Position GetNextPosition(Position position);
+    public abstract Position Move(Position currentPosition);
 
     public abstract Direction TurnLeft();
 

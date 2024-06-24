@@ -7,15 +7,15 @@ namespace jarai.tdd7.MarsRoverKata
 {
     public class SouthDirection : Direction
     {
-        public static readonly SouthDirection Instance = new SouthDirection();
+        public static SouthDirection Instance { get; } = new SouthDirection();
 
         private SouthDirection() : base("S")
         {
         }
 
-        public override Position GetNextPosition(Position position)
+        public override Position Move(Position currentPosition)
         {
-            return new Position(position.X, position.Y - 1);
+            return new Position(currentPosition.X, currentPosition.Y - 1);
         }
 
         public override Direction TurnLeft()
