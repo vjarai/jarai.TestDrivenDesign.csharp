@@ -18,14 +18,13 @@ public class PositionTests
         Assert.True(actual);
     }
 
-    
 
     [Fact]
     public void overflow()
     {
         // Arrange
         var pos1 = new Position(4, 10);
-       
+
 
         // Assert
         Assert.Equal(new Position(4, 0), pos1);

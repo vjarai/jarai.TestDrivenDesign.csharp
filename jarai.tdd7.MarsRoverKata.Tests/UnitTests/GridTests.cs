@@ -5,7 +5,7 @@ namespace jarai.tdd7.MarsRoverKata.Tests.UnitTests;
 public class GridTests
 {
     [Fact]
-    public void HasObstacleTest()
+    public void Given_grid_with_obstacle_at_0_0_then_grid_HasObstacle_at_0_0()
     {
         // Arrange
         var target = new Grid();

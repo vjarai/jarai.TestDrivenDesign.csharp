@@ -29,7 +29,6 @@ public class MarsRoverTests
         string actual = target.ExecuteCommands("MMMMMMMMMM");
 
         // Assert
-
         Assert.Equal("0:0:N", actual);
     }
 
@@ -43,7 +42,6 @@ public class MarsRoverTests
         string actual = target.ExecuteCommands("MMRMMLM");
 
         // Assert
-
         Assert.Equal("2:3:N", actual);
     }
 
@@ -60,7 +58,6 @@ public class MarsRoverTests
         string actual = target.ExecuteCommands("MMMM");
 
         // Assert
-
         Assert.Equal("O:0:2:N", actual);
     }
 }

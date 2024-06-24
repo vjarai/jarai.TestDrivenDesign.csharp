@@ -13,6 +13,5 @@ public class Program
         };
 
         marsRover.ExecuteCommands("MMMMRMLMMLMRM");
-
     }
 }

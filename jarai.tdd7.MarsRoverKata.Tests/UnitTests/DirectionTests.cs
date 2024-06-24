@@ -5,82 +5,109 @@ namespace jarai.tdd7.MarsRoverKata.Tests.UnitTests;
 public class DirectionTests
 {
     [Fact]
-    public void Left_of_North_should_West()
+    public void Given_NorthDirection_when_TurnLeft_then_WestDirection()
     {
+        // Arrange
         var sut = NorthDirection.Instance;
 
+        // Act
         var actual = sut.TurnLeft();
 
+        // Assert
         Assert.Equal(WestDirection.Instance, actual);
     }
 
     [Fact]
-    public void Right_of_North_should_East()
+    public void Given_NorthDirection_when_TurnRight_then_EastDirection()
     {
-       var sut = NorthDirection.Instance;
+        // Arrange
+        var sut = NorthDirection.Instance;
 
-       var actual = sut.TurnRight();
+        // Act
+        var actual = sut.TurnRight();
 
-       Assert.Equal(EastDirection.Instance, actual);
+        // Assert
+        Assert.Equal(EastDirection.Instance, actual);
     }
 
 
     [Fact]
-    public void Left_of_East_should_North()
+    public void Given_EastDirection_when_TurnLeft_then_NorthDirection()
     {
+        // Arrange
         var sut = EastDirection.Instance;
-        
+
+        // Act
         var actual = sut.TurnLeft();
 
+        // Assert
         Assert.Equal(NorthDirection.Instance, actual);
     }
 
     [Fact]
-    public void Right_of_East_should_South()
+    public void Given_EastDirection_when_TurnRight_then_SouthDirection()
     {
-       var sut = EastDirection.Instance;
+        // Arrange
+        var sut = EastDirection.Instance;
 
-       var actual = sut.TurnRight();
+        // Act
+        var actual = sut.TurnRight();
 
-       Assert.Equal(SouthDirection.Instance, actual);
+        // Assert
+        Assert.Equal(SouthDirection.Instance, actual);
     }
 
 
     [Fact]
-    public void Left_of_West_should_South()
+    public void Given_WestDirection_when_TurnLeft_then_SouthDirection()
     {
+        // Arrange
         var sut = WestDirection.Instance;
-        
+
+        // Act
         var actual = sut.TurnLeft();
 
+        // Assert
         Assert.Equal(SouthDirection.Instance, actual);
     }
 
     [Fact]
-    public void Right_of_West_should_North()
+    public void Given_WestDirection_when_TurnRight_then_NorthDirection()
     {
+        // Arrange
         var sut = WestDirection.Instance;
-        Assert.IsType<NorthDirection>(sut.TurnRight());
+
+        // Act
+        var actual = sut.TurnRight();
+
+        // Assert
+        Assert.Equal(NorthDirection.Instance, actual);
     }
 
 
     [Fact]
-    public void Left_of_South_should_East()
+    public void Given_SouthDirection_when_TurnLeft_then_EastDirection()
     {
+        // Arrange
         var sut = SouthDirection.Instance;
-        
+
+        // Act
         var actual = sut.TurnLeft();
 
+        // Assert
         Assert.Equal(EastDirection.Instance, actual);
     }
 
     [Fact]
-    public void Right_of_South_should_West()
+    public void Given_SouthDirection_when_TurnRight_then_WestDirection()
     {
-       var sut = SouthDirection.Instance;
-       
-       var actual = sut.TurnRight();
+        // Arrange
+        var sut = SouthDirection.Instance;
 
-       Assert.Equal(WestDirection.Instance, actual);
+        // Act
+        var actual = sut.TurnRight();
+
+        // Assert
+        Assert.Equal(WestDirection.Instance, actual);
     }
 }

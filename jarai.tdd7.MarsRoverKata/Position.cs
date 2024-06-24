@@ -3,14 +3,15 @@
 public class Position
 {
     private const int Max = 10;
-    public int X { get; set; }
-    public int Y { get; set; }
 
     public Position(int x, int y)
     {
         X = x % Max;
         Y = y % Max;
     }
+
+    public int X { get; set; }
+    public int Y { get; set; }
 
     public override bool Equals(object obj)
     {

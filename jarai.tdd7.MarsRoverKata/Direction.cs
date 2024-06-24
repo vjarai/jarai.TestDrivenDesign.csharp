@@ -5,7 +5,7 @@ public abstract class Direction
     private readonly string _name;
 
 
-    protected Direction( string name)
+    protected Direction(string name)
     {
         _name = name;
     }

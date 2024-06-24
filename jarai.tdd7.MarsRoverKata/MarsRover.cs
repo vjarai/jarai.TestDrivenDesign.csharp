@@ -1,9 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-
-
-namespace jarai.tdd7.MarsRoverKata;
-
+﻿namespace jarai.tdd7.MarsRoverKata;
 
 public class MarsRover
 {
@@ -14,12 +9,9 @@ public class MarsRover
     private Position _currentPosition;
     private bool _obstacleDetected;
 
-    public Action<string> Logger { get; set; } = new(_ => { });
-
     public MarsRover()
-    : this(new Grid(), new Position(0, 0), NorthDirection.Instance)
+        : this(new Grid(), new Position(0, 0), NorthDirection.Instance)
     {
-
     }
 
     public MarsRover(Grid grid, Position startPosition, Direction startDirection)
@@ -29,20 +21,21 @@ public class MarsRover
         _currentDirection = startDirection;
     }
 
+    public Action<string> Logger { get; init; } = _ => { };
+
     public string ExecuteCommands(string commands)
     {
-        string result = "";
+        var result = "";
 
         foreach (char command in commands)
         {
-          _obstacleDetected = false;
+            _obstacleDetected = false;
 
-          switch (command)
+            switch (command)
             {
-
                 case 'M':
-                    // Move one Step
-                    Move();
+                    // MoveForward one Step
+                    MoveForward();
                     break;
 
                 case 'L':
@@ -59,26 +52,28 @@ public class MarsRover
                     throw new ArgumentException($"Unknown command: {command}");
             }
 
-            result = $"{(_obstacleDetected?"O:":"")}{_currentPosition}:{_currentDirection}";
+            result = $"{(_obstacleDetected ? "O:" : "")}{_currentPosition}:{_currentDirection}";
             Logger($"{command} => {result}");
         }
 
         return result;
     }
 
-    private void TurnRight()
+    internal string TurnRight()
     {
         _currentDirection = _currentDirection.TurnRight();
+        return _currentDirection.ToString();
     }
 
-    private void TurnLeft()
+    internal string TurnLeft()
     {
         _currentDirection = _currentDirection.TurnLeft();
+        return _currentDirection.ToString();
     }
 
-    internal Position Move()
+    internal Position MoveForward()
     {
-        var nextPosition =  _currentDirection.Move(_currentPosition);
+        var nextPosition = _currentDirection.Move(_currentPosition);
 
         _obstacleDetected = _grid.HasObstacle(nextPosition);
 
