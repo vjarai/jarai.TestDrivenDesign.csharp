@@ -8,8 +8,8 @@ public class Position
 
     public Position(int x, int y)
     {
-        X = x % 10;
-        Y = y % 10;
+        X = x % Max;
+        Y = y % Max;
     }
 
     public override bool Equals(object obj)
