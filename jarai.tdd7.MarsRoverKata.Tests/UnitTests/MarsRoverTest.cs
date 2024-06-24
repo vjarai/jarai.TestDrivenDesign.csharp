@@ -5,15 +5,15 @@ namespace jarai.tdd7.MarsRoverKata.Tests.UnitTests;
 public class MarsRoverTest
 {
     [Fact]
-    public void CalculateNextPositionTest()
+    public void MoveTest()
     {
         // Arrange
         var target = new MarsRover();
 
         // Act
-        var actual = target.CalculateNextPosition();
+        var actual = target.Move();
 
         // Assert
-        Assert.Equal(new Position(0,1), actual);
+        Assert.Equal(new Position(0, 1), actual);
     }
 }

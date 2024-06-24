@@ -15,7 +15,7 @@
   <Class Name="jarai.tdd7.MarsRoverKata.Position">
     <Position X="6.5" Y="2.5" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAEwAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
       <FileName>Position.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -32,35 +32,35 @@
   <Class Name="jarai.tdd7.MarsRoverKata.Direction">
     <Position X="6.5" Y="5.5" Width="3.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIACAAAEAAAAAAAAAAAAAEAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAACAAAEAAAAAAAAAAAAAECAAAAAAAAAAAQ=</HashCode>
       <FileName>Direction.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="jarai.tdd7.MarsRoverKata.SouthDirection">
     <Position X="4.25" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIACAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAECAAAAAAAAAAAA=</HashCode>
       <FileName>SouthDirection.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="jarai.tdd7.MarsRoverKata.NorthDirection">
     <Position X="6.25" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIACAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAECAAAAAAAAAAAA=</HashCode>
       <FileName>NorthDirection.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="jarai.tdd7.MarsRoverKata.EastDirection">
     <Position X="8.25" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAECAAAAAAAAAAAA=</HashCode>
       <FileName>EastDirection.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="jarai.tdd7.MarsRoverKata.WestDirection">
-    <Position X="10.75" Y="9.75" Width="1.5" />
+    <Position X="10.25" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAECAAAAAAAAAAAA=</HashCode>
       <FileName>WestDirection.cs</FileName>
     </TypeIdentifier>
   </Class>

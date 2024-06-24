@@ -7,7 +7,9 @@ namespace jarai.tdd7.MarsRoverKata
 {
     public class SouthDirection : Direction
     {
-        public SouthDirection() : base("S")
+        public static readonly SouthDirection Instance = new SouthDirection();
+
+        private SouthDirection() : base("S")
         {
         }
 
@@ -18,12 +20,12 @@ namespace jarai.tdd7.MarsRoverKata
 
         public override Direction TurnLeft()
         {
-            return new EastDirection();
+            return EastDirection.Instance;
         }
 
         public override Direction TurnRight()
         {
-            return new WestDirection();
+            return WestDirection.Instance;
         }
     }
 }

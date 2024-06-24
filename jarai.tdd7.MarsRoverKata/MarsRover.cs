@@ -12,11 +12,12 @@ public class MarsRover
     private Direction _currentDirection;
 
     private Position _currentPosition;
+    private bool _obstacleDetected;
 
     public Action<string> Logger { get; set; } = new(_ => { });
 
     public MarsRover()
-    : this(new Grid(), new Position(0, 0), new NorthDirection())
+    : this(new Grid(), new Position(0, 0), NorthDirection.Instance)
     {
 
     }
@@ -34,45 +35,56 @@ public class MarsRover
 
         foreach (char command in commands)
         {
-          bool obstacleDetected = false;
+          _obstacleDetected = false;
 
           switch (command)
             {
 
                 case 'M':
                     // Move one Step
-                    var nextPosition = CalculateNextPosition();
-
-                    obstacleDetected = _grid.HasObstacle(nextPosition);
-
-                    if (!obstacleDetected)
-                        _currentPosition = nextPosition;
-
+                    Move();
                     break;
 
                 case 'L':
                     // Turn Left
-                    _currentDirection = _currentDirection.TurnLeft();
+                    TurnLeft();
                     break;
 
                 case 'R':
                     // Turn Right
-                    _currentDirection = _currentDirection.TurnRight();
+                    TurnRight();
                     break;
 
                 default:
                     throw new ArgumentException($"Unknown command: {command}");
             }
 
-            result = $"{(obstacleDetected?"O:":"")}{_currentPosition}:{_currentDirection}";
+            result = $"{(_obstacleDetected?"O:":"")}{_currentPosition}:{_currentDirection}";
             Logger($"{command} => {result}");
         }
 
         return result;
     }
 
-    internal Position CalculateNextPosition()
+    private void TurnRight()
     {
-        return  _currentDirection.GetNextPosition(_currentPosition);
+        _currentDirection = _currentDirection.TurnRight();
+    }
+
+    private void TurnLeft()
+    {
+        _currentDirection = _currentDirection.TurnLeft();
+    }
+
+    internal Position Move()
+    {
+        var nextPosition =  _currentDirection.GetNextPosition(_currentPosition);
+
+        _obstacleDetected = _grid.HasObstacle(nextPosition);
+
+        if (!_obstacleDetected)
+            _currentPosition = nextPosition;
+
+        return _currentPosition;
     }
 }

@@ -12,11 +12,6 @@ public class Position
         Y = y % 10;
     }
 
-    public static Position operator +(Position lhs, Position rhs)
-    {
-        return new Position((lhs.X + rhs.X) % Max, (lhs.Y + rhs.Y) % Max);
-    }
-
     public override bool Equals(object obj)
     {
         if (obj is Position other)
@@ -24,8 +19,6 @@ public class Position
 
         return false;
     }
-
-    
 
     public override string ToString()
     {

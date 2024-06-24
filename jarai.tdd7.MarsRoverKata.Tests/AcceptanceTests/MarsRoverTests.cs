@@ -54,7 +54,7 @@ public class MarsRoverTests
         var grid = new Grid();
         grid.AddObstacle(new Position(0, 3));
 
-        var target = new MarsRover(grid, new Position(0, 0), new NorthDirection());
+        var target = new MarsRover(grid, new Position(0, 0), NorthDirection.Instance);
 
         // Act
         string actual = target.ExecuteCommands("MMMM");
