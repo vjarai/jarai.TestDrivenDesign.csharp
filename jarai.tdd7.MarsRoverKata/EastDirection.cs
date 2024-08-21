@@ -8,7 +8,7 @@ public class EastDirection : Direction
 
     public static EastDirection Instance { get; } = new();
 
-    public override Position Move(Position currentPosition)
+    public override Position MoveForward(Position currentPosition)
     {
         return new Position(currentPosition.X + 1, currentPosition.Y);
     }

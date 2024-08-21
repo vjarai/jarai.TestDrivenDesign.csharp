@@ -16,7 +16,7 @@ public abstract class Direction
         return _name;
     }
 
-    public abstract Position Move(Position currentPosition);
+    public abstract Position MoveForward(Position currentPosition);
 
     public abstract Direction TurnLeft();
 

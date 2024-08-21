@@ -73,7 +73,7 @@ public class MarsRover
 
     internal Position MoveForward()
     {
-        var nextPosition = _currentDirection.Move(_currentPosition);
+        var nextPosition = _currentDirection.MoveForward(_currentPosition);
 
         _obstacleDetected = _grid.HasObstacle(nextPosition);
 
