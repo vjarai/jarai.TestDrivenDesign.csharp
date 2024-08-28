@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\jarai.tdd8.Kniffel\jarai.tdd8.KniffelKata.csproj" />
+    <ProjectReference Include="..\tdd8.Kniffel.Refactored\jarai.tdd8.KniffelRefactored.csproj" />
   </ItemGroup>
 
-
+ 
 </Project>

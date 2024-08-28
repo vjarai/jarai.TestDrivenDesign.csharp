@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="jarai.tdd8.KniffelRefactored.KniffelCalculator">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAEAQAAAhAAAAQAEAAEQAAAIQAAAIQAAAABAAAAAIg=</HashCode>
+      <FileName>KniffelCalculator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_rules" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="jarai.tdd8.KniffelRefactored.KniffelRuleBase" Collapsed="true">
+    <Position X="12" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>KniffelRuleBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd8.KniffelRefactored.ChanceRule" Collapsed="true">
+    <Position X="2" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChanceRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd8.KniffelRefactored.FourOfAKindRule" Collapsed="true">
+    <Position X="4.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FourOfAKindRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd8.KniffelRefactored.FullHouseRule" Collapsed="true">
+    <Position X="6.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FullHouseRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd8.KniffelRefactored.KniffelRule" Collapsed="true">
+    <Position X="8.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>KniffelRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd8.KniffelRefactored.LargeStraightRule" Collapsed="true">
+    <Position X="11" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LargeStraightRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd8.KniffelRefactored.CountRule" Collapsed="true">
+    <Position X="13.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>CountRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd8.KniffelRefactored.ScorePairRule" Collapsed="true">
+    <Position X="15.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScorePairRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd8.KniffelRefactored.SmallStraightRule" Collapsed="true">
+    <Position X="17.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SmallStraightRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd8.KniffelRefactored.ThreeOfAKindRule" Collapsed="true">
+    <Position X="20" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ThreeOfAKindRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd8.KniffelRefactored.TwoPairRule" Collapsed="true">
+    <Position X="22.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TwoPairRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

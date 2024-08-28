@@ -1,4 +1,4 @@
-﻿namespace jarai.tdd8.KniffelKata
+﻿namespace jarai.tdd8.KniffelLegacy
 {
     public class KniffelCalculator
     {
