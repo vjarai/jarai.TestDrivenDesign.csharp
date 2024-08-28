@@ -1,6 +1,6 @@
 ﻿namespace jarai.tdd8.KniffelKata
 {
-    public class Kniffel
+    public class KniffelCalculator
     {
         public static int Chance(int d1, int d2, int d3, int d4, int d5)
         {
@@ -12,7 +12,7 @@
             total += d5;
             return total;
         }
-        public static int yatzy(params int[] dice)
+        public static int Kniffel(params int[] dice)
         {
             var counts = new int[6];
             foreach (var die in dice)
@@ -60,8 +60,8 @@
         }
 
         protected int[] dice;
-        public Kniffel() { }
-        public Kniffel(int d1, int d2, int d3, int d4, int _5)
+        public KniffelCalculator() { }
+        public KniffelCalculator(int d1, int d2, int d3, int d4, int _5)
         {
             dice = new int[5];
             dice[0] = d1;
@@ -88,7 +88,7 @@
                     s = s + 5;
             return s;
         }
-        public int sixes()
+        public int Sixes()
         {
             var sum = 0;
             for (var at = 0; at < dice.Length; at++)
