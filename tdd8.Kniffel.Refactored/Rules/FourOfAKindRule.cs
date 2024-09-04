@@ -13,7 +13,7 @@ public class FourOfAKindRule : ScoringRule
         for (var i = 0; i < 6; i++)
         {
             if (counts[i] >= 4)
-                return (i + 1) * 4;
+                return wurf.Sum();
         }
 
         return 0;

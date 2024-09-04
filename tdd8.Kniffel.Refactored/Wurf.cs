@@ -15,7 +15,7 @@ public class Wurf : IEnumerable<int>
             _wuerfel[i] = random.Next(1, 7);
         }
 
-        _wuerfel = _wuerfel.OrderBy(d => d).ToArray();
+        _wuerfel = _wuerfel.Order().ToArray();
     }
 
     public int[] GetCounts()
@@ -35,7 +35,7 @@ public class Wurf : IEnumerable<int>
         if (wuerfel.Length != 5)
             throw new ArgumentException("A Wurf must contain exactly 5 numbers.");
 
-        _wuerfel = wuerfel;
+        _wuerfel = wuerfel.Order().ToArray();
     }
 
 
@@ -47,5 +47,10 @@ public class Wurf : IEnumerable<int>
     IEnumerator IEnumerable.GetEnumerator()
     {
         return _wuerfel.GetEnumerator();
+    }
+
+    public override string ToString()
+    {
+        return string.Join(',', _wuerfel);
     }
 }

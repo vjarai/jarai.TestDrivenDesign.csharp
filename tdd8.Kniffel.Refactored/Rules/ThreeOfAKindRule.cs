@@ -13,7 +13,7 @@ public class ThreeOfAKindRule : ScoringRule
         for (var i = 0; i < 6; i++)
         {
             if (counts[i] >= 3)
-                return (i + 1) * 3;
+                return wurf.Sum();
         }
 
         return 0;

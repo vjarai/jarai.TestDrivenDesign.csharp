@@ -186,6 +186,7 @@
             tallies[d3 - 1] += 1;
             tallies[d4 - 1] += 1;
             tallies[d5 - 1] += 1;
+
             if (tallies[1] == 1 &&
                 tallies[2] == 1 &&
                 tallies[3] == 1 &&

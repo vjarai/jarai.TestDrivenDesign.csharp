@@ -147,7 +147,7 @@ namespace jarai.tdd8.KniffelRefactored.Tests
             var result = sut.Viererpasch(wurf);
 
             // Assert
-            Assert.Equal(8, result);
+            Assert.Equal(13, result);
         }
 
         [Fact]
@@ -177,7 +177,7 @@ namespace jarai.tdd8.KniffelRefactored.Tests
             var result = sut.KleineStrasse(wurf);
 
             // Assert
-            Assert.Equal(15, result);
+            Assert.Equal(30, result);
         }
 
         [Fact]
@@ -191,7 +191,7 @@ namespace jarai.tdd8.KniffelRefactored.Tests
             var result = sut.GrosseStrasse(wurf);
 
             // Assert
-            Assert.Equal(20, result);
+            Assert.Equal(40, result);
         }
 
         [Fact]
@@ -206,7 +206,7 @@ namespace jarai.tdd8.KniffelRefactored.Tests
             var result = sut.FullHouse(wurf);
 
             // Assert
-            Assert.Equal(13, result);
+            Assert.Equal(25, result);
         }
     }
 }

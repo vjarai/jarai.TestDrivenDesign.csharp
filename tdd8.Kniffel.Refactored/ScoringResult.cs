@@ -13,6 +13,6 @@ public class ScoringResult
 
     public override string ToString()
     {
-        return $"{_ruleName}: {_result}";
+        return $"{_result:d2} : {_ruleName}";
     }
 }

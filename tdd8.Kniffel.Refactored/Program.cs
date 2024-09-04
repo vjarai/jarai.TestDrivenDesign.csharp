@@ -10,14 +10,25 @@ namespace jarai.tdd8.KniffelRefactored
     {
         static void Main(string[] args)
         {
-            var wurf = new Wurf(1, 2, 3, 4, 5);
-            var sut = new KniffelScoringService();
+            // Dora hat drei Fünfen und zwei Dreien gewürfelt.
+            // Sie hat nun vier Möglichkeiten:
+            // ■ 25 Punkte für „Full House
+            // ■ 21 Punkte für „Dreierpasch“
+            // ■ 15 Punkte für die Fünfen
+            // ■  6 Punkte für die Dreien
 
-            var result = sut.CalculateScore(wurf);
+            //var wurf = new Wurf(5, 5, 5, 3, 3);
+            //var wurf = new Wurf(3, 3, 3, 3, 3);
+            var wurf = new Wurf(4, 3, 2, 5,  1 );
+            var scoringService = new KniffelScoringService();
 
-            foreach (var scoringResult in result)
+            var scorings = scoringService.CalculateScorings(wurf);
+
+            Console.WriteLine(wurf);
+
+            foreach (var scoring in scorings)
             {
-                Console.WriteLine(scoringResult);
+                Console.WriteLine(scoring);
             }
         }
     }

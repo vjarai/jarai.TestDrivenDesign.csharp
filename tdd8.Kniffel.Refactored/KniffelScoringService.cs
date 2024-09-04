@@ -103,11 +103,12 @@ public class KniffelScoringService
         return _rules[rule].CalculateScore(wurf);
     }
 
-    public IEnumerable<ScoringResult> CalculateScore(Wurf wurf)
+    public IEnumerable<ScoringResult> CalculateScorings(Wurf wurf)
     {
         return from rule in _rules.Values
                let result = rule.CalculateScore(wurf)
                where result > 0
+               orderby result descending
                select new ScoringResult(rule.Name, result);
     }
 }
