@@ -18,6 +18,9 @@ public class Wurf : IEnumerable<int>
         _wuerfel = _wuerfel.Order().ToArray();
     }
 
+    /// <summary>
+    /// Returns the counts of each die face in the Wurf.
+    /// </summary>
     public int[] GetCounts()
     {
         int[] counts = new int[6];

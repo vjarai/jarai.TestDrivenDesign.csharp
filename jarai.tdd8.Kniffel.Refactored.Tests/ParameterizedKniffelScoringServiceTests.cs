@@ -4,24 +4,9 @@ using Xunit;
 
 namespace jarai.tdd8.KniffelRefactored.Tests;
 
-public class KniffelScoringServiceTests
+public class ParameterizedKniffelScoringServiceTests
 {
-    // Simple Test using [Fact]
-    [Fact]
-    public void CalculateScore_non_parameterized_Test()
-    {
-        // Arrange
-        var wurf = new Wurf(1, 2, 3, 4, 5);
-        var sut = new KniffelScoringService();
-
-        // Act
-        int result = sut.CalculateScore(wurf, ScoreId.Chance);
-
-        // Assert
-        Assert.Equal(15, result);
-    }
-
-
+    
     // Parameterized Test using InlineData
     [Theory]
     [InlineData(1, 1, 1, 1, 1, ScoreId.Chance, 5)]
@@ -30,7 +15,7 @@ public class KniffelScoringServiceTests
     {
         // Arrange
         var wurf = new Wurf(a, b, c, d, e);
-        var sut = new KniffelScoringService();
+        var sut = new ParameterizedKniffelScoringService();
 
         // Act
         int result = sut.CalculateScore(wurf, scoreId);
@@ -47,7 +32,7 @@ public class KniffelScoringServiceTests
     {
         // Arrange
         var wurf = new Wurf(a, b, c, d, e);
-        var sut = new KniffelScoringService();
+        var sut = new ParameterizedKniffelScoringService();
 
         // Act
         int result = sut.CalculateScore(wurf, scoreId);
@@ -63,7 +48,7 @@ public class KniffelScoringServiceTests
     public void CalculateScore_strongly_typed_parameterized_Test_using_ClassDataSource(Wurf wurf, ScoreId scoreId, int expected)
     {
         // Arrange
-        var sut = new KniffelScoringService();
+        var sut = new ParameterizedKniffelScoringService();
 
         // Act
         int result = sut.CalculateScore(wurf, scoreId);
@@ -79,7 +64,7 @@ public class KniffelScoringServiceTests
     public void CalculateScore_strongly_typed_parameterized_Test_using_MemberData(Wurf wurf, ScoreId scoreId, int expected)
     {
         // Arrange
-        var sut = new KniffelScoringService();
+        var sut = new ParameterizedKniffelScoringService();
 
         // Act
         int result = sut.CalculateScore(wurf, scoreId);
@@ -95,7 +80,7 @@ public class KniffelScoringServiceTests
     public void CalculateScore_parameterized_Test_using_MemberData(int a, int b, int c, int d, int e, ScoreId scoreId, int expected)
     {
         // Arrange
-        var sut = new KniffelScoringService();
+        var sut = new ParameterizedKniffelScoringService();
         var wurf = new Wurf(a, b, c, d, e);
 
         // Act
