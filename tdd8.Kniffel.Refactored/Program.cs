@@ -17,9 +17,9 @@ namespace jarai.tdd8.KniffelRefactored
             // ■ 15 Punkte für die Fünfen
             // ■  6 Punkte für die Dreien
 
-            //var wurf = new Wurf(5, 5, 5, 3, 3);
+            var wurf = new Wurf(5, 5, 5, 3, 3);
             //var wurf = new Wurf(3, 3, 3, 3, 3);
-            var wurf = new Wurf(4, 3, 2, 5,  1 );
+            //var wurf = new Wurf(4, 3, 2, 5,  1 );
             var scoringService = new KniffelScoringService();
 
             var scorings = scoringService.CalculateScorings(wurf);

@@ -2,7 +2,7 @@ namespace jarai.tdd8.KniffelRefactored.Rules;
 
 public class ThreeOfAKindRule : ScoringRule
 {
-    public ThreeOfAKindRule() : base("Dreier Pasch")
+    public ThreeOfAKindRule() : base(ScoringRuleId.ThreeOfAKind, "Dreier Pasch")
     {
     }
 

@@ -1,212 +1,143 @@
-﻿using Xunit;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Xunit;
 
-namespace jarai.tdd8.KniffelRefactored.Tests
+namespace jarai.tdd8.KniffelRefactored.Tests;
+
+public class KniffelScoringServiceTests
 {
-    public class KniffelScoringServiceTests
+    // Simple Test using [Fact]
+    [Fact]
+    public void CalculateScore_non_parameterized_Test()
     {
-        [Fact]
-        public void Chance_ShouldReturnSumOfAllDice()
+        // Arrange
+        var wurf = new Wurf(1, 2, 3, 4, 5);
+        var sut = new KniffelScoringService();
+
+        // Act
+        int result = sut.CalculateScore(wurf, ScoringRuleId.Chance);
+
+        // Assert
+        Assert.Equal(15, result);
+    }
+
+
+    // Parameterized Test using InlineData
+    [Theory]
+    [InlineData(1, 1, 1, 1, 1, ScoringRuleId.Chance, 5)]
+    [InlineData(4, 4, 4, 3, 3, ScoringRuleId.FullHouse, 25)]
+    public void CalculateScore_parameterized_Test_using_InlineData(int a, int b, int c, int d, int e, ScoringRuleId rule, int expected)
+    {
+        // Arrange
+        var wurf = new Wurf(a, b, c, d, e);
+        var sut = new KniffelScoringService();
+
+        // Act
+        int result = sut.CalculateScore(wurf, rule);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
+
+    // Parameterized Test using ClassData
+    [Theory]
+    [ClassData(typeof(TestDataSourceClass))]
+    public void CalculateScore_parameterized_Test_using_ClassDataSource(int a, int b, int c, int d, int e, ScoringRuleId rule, int expected)
+    {
+        // Arrange
+        var wurf = new Wurf(a, b, c, d, e);
+        var sut = new KniffelScoringService();
+
+        // Act
+        int result = sut.CalculateScore(wurf, rule);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
+
+    // Parameterized Test using strongly typed MemberData  
+    [Theory]
+    [MemberData(nameof(StronglyTypedTestDataSourceMemberFunction))]
+    public void CalculateScore_parameterized_Test_using_strongly_typed_MemberData(Wurf wurf, ScoringRuleId rule, int expected)
+    {
+        // Arrange
+        var sut = new KniffelScoringService();
+
+        // Act
+        int result = sut.CalculateScore(wurf, rule);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
+
+    // Parameterized Test using MemberData 
+    [Theory]
+    [MemberData(nameof(TestDataSourceMemberFunction))]
+    public void CalculateScore_parameterized_Test_using_MemberData(int a, int b, int c, int d, int e, ScoringRuleId rule, int expected)
+    {
+        // Arrange
+        var sut = new KniffelScoringService();
+        var wurf = new Wurf(a, b, c, d, e);
+
+        // Act
+        int result = sut.CalculateScore(wurf, rule);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
+    /// <summary>
+    ///     Static Member Function which returns the data for the [MemberData] parametrized Test
+    /// </summary>
+    public static IEnumerable<object[]> TestDataSourceMemberFunction()
+    {
+        return new List<object[]>
         {
-            // Arrange
-            var wurf = new Wurf(1, 2, 3, 4, 5);
-            var sut = new KniffelScoringService();
+            new object[] { 1, 2, 3, 4, 3, ScoringRuleId.SmallStraight, 30 },
+            new object[] { 1, 2, 3, 1, 3, ScoringRuleId.SmallStraight, 0 },
+            new object[] { 2, 3, 4, 5, 6, ScoringRuleId.LargeStraight, 40 }
+        };
+    }
 
-            // Act
-            var result = sut.Chance(wurf);
 
-            // Assert
-            Assert.Equal(15, result);
+    /// <summary>
+    ///     Static Member Function which returns the data for the [MemberData] parametrized Test
+    /// </summary>
+    public static TheoryData<Wurf, ScoringRuleId, int> StronglyTypedTestDataSourceMemberFunction()
+    {
+        return new TheoryData<Wurf, ScoringRuleId, int>
+        {
+            { new Wurf(6, 6, 6, 3, 1), ScoringRuleId.ThreeOfAKind, 22 },
+            { new Wurf(3, 3, 3, 3, 5), ScoringRuleId.FourOfAKind, 17 }
+        };
+    }
+
+    /// <summary>
+    ///     External Class which returns the data for the [ClassData] parameterized Test
+    /// </summary>
+    public class TestDataSourceClass : IEnumerable<object[]>
+    {
+        private readonly List<object[]> _data = new()
+        {
+            new object[] { 6, 6, 6, 6, 6, ScoringRuleId.Sixes, 30 },
+            new object[] { 5, 5, 5, 5, 5, ScoringRuleId.Fives, 25 },
+            new object[] { 4, 4, 4, 4, 5, ScoringRuleId.Fours, 16 },
+            new object[] { 3, 3, 3, 4, 5, ScoringRuleId.Threes, 9 },
+            new object[] { 2, 2, 1, 4, 2, ScoringRuleId.Twos, 6 },
+            new object[] { 1, 2, 1, 4, 1, ScoringRuleId.Ones, 3 }
+        };
+
+        public IEnumerator<object[]> GetEnumerator()
+        {
+            return _data.GetEnumerator();
         }
 
-        [Fact]
-        public void Kniffel_ShouldReturn50IfAllDiceAreSame()
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            // Arrange
-            var wurf = new Wurf(6, 6, 6, 6, 6);
-            var sut = new KniffelScoringService();
-
-
-            // Act
-            var result = sut.Kniffel(wurf);
-
-            // Assert
-            Assert.Equal(50, result);
-        }
-
-        [Fact]
-        public void Kniffel_ShouldReturn0IfNotAllDiceAreSame()
-        {
-            // Arrange
-            var wurf = new Wurf( 6, 6, 6, 6, 5 );
-            var sut = new KniffelScoringService();
-
-
-            // Act
-            var result = sut.Kniffel(wurf);
-
-            // Assert
-            Assert.Equal(0, result);
-        }
-
-        [Fact]
-        public void Ones_ShouldReturnSumOfOnes()
-        {
-            // Arrange
-            var wurf = new Wurf(1, 2, 1, 4, 1);
-            var sut = new KniffelScoringService();
-
-
-            // Act
-            var result = sut.Einer(wurf);
-
-            // Assert
-            Assert.Equal(3, result);
-        }
-
-        [Fact]
-        public void Twos_ShouldReturnSumOfTwos()
-        {
-            // Arrange
-            var wurf = new Wurf( 2, 2, 1,  4,  2);
-            var sut = new KniffelScoringService();
-
-
-            // Act
-            var result = sut.Zweier(wurf);
-
-            // Assert
-            Assert.Equal(6, result);
-        }
-
-        [Fact]
-        public void Threes_ShouldReturnSumOfThrees()
-        {
-            // Arrange
-            var wurf = new Wurf( 3, 3, 3, 4, 5);
-            var sut = new KniffelScoringService();
-
-
-            // Act
-            var result = sut.Dreier(wurf);
-
-            // Assert
-            Assert.Equal(9, result);
-        }
-
-        [Fact]
-        public void Fours_ShouldReturnSumOfFours()
-        {
-            // Arrange
-            var wurf = new Wurf( 4, 4, 4, 4, 5);
-            var sut = new KniffelScoringService();
-
-            // Act
-            var result = sut.Vierer(wurf);
-
-            // Assert
-            Assert.Equal(16, result);
-        }
-
-        [Fact]
-        public void Fives_ShouldReturnSumOfFives()
-        {
-            // Arrange
-            var wurf = new Wurf( 5, 5, 5, 5, 5);
-            var sut = new KniffelScoringService();
-
-            // Act
-            var result = sut.Fuenfer(wurf);
-
-            // Assert
-            Assert.Equal(25, result);
-        }
-
-        [Fact]
-        public void Sixes_ShouldReturnSumOfSixes()
-        {
-            // Arrange
-            var wurf = new Wurf( 6, 6, 6, 6, 6);
-            var sut = new KniffelScoringService();
-
-            // Act
-            var result = sut.Sechser(wurf);
-
-            // Assert
-            Assert.Equal(30, result);
-        }
-
-
-        [Fact]
-        public void FourOfAKind_ShouldReturnSumIfFourOfAKind()
-        {
-            // Arrange
-            var wurf = new Wurf( 2, 2, 2, 2, 5);
-            var sut = new KniffelScoringService();
-
-            // Act
-            var result = sut.Viererpasch(wurf);
-
-            // Assert
-            Assert.Equal(13, result);
-        }
-
-        [Fact]
-        public void ThreeOfAKind_ShouldReturnSumIfThreeOfAKind()
-        {
-            // Arrange
-            var wurf = new Wurf( 3, 3, 3, 4, 5);
-            var sut = new KniffelScoringService();
-
-
-            // Act
-            var result = sut.Dreierpasch(wurf);
-
-            // Assert
-            Assert.Equal(9, result);
-        }
-
-        [Fact]
-        public void SmallStraight_ShouldReturn15IfSmallStraight()
-        {
-            // Arrange
-            var wurf = new Wurf( 1, 2, 3, 4, 5);
-            var sut = new KniffelScoringService();
-
-
-            // Act
-            var result = sut.KleineStrasse(wurf);
-
-            // Assert
-            Assert.Equal(30, result);
-        }
-
-        [Fact]
-        public void LargeStraight_ShouldReturn20IfLargeStraight()
-        {
-            // Arrange
-            var wurf = new Wurf( 2, 3, 4, 5, 6);
-            var sut = new KniffelScoringService();
-            
-            // Act
-            var result = sut.GrosseStrasse(wurf);
-
-            // Assert
-            Assert.Equal(40, result);
-        }
-
-        [Fact]
-        public void FullHouse_ShouldReturnSumIfFullHouse()
-        {
-            // Arrange
-            var wurf = new Wurf( 2, 2, 3, 3, 3);
-            var sut = new KniffelScoringService();
-
-
-            // Act
-            var result = sut.FullHouse(wurf);
-
-            // Assert
-            Assert.Equal(25, result);
+            return GetEnumerator();
         }
     }
 }
