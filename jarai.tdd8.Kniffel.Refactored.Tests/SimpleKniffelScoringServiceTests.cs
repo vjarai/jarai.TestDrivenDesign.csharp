@@ -10,7 +10,7 @@ public class SimpleKniffelScoringServiceTests
     {
         // Arrange
         var wurf = new Wurf(1, 2, 3, 4, 5);
-        var sut = new ParameterizedKniffelScoringService();
+        var sut = new KniffelScoringService();
 
         // Act
         int result = sut.CalculateScore(wurf, ScoreId.Chance);
@@ -26,7 +26,7 @@ public class SimpleKniffelScoringServiceTests
     {
         // Arrange
         var wurf = new Wurf(5, 2, 3, 4, 5);
-        var sut = new ParameterizedKniffelScoringService();
+        var sut = new KniffelScoringService();
 
         // Act
         int result = sut.CalculateScore(wurf, ScoreId.Chance);

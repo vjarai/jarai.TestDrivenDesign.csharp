@@ -15,7 +15,7 @@ public class ParameterizedKniffelScoringServiceTests
     {
         // Arrange
         var wurf = new Wurf(a, b, c, d, e);
-        var sut = new ParameterizedKniffelScoringService();
+        var sut = new KniffelScoringService();
 
         // Act
         int result = sut.CalculateScore(wurf, scoreId);
@@ -32,7 +32,7 @@ public class ParameterizedKniffelScoringServiceTests
     {
         // Arrange
         var wurf = new Wurf(a, b, c, d, e);
-        var sut = new ParameterizedKniffelScoringService();
+        var sut = new KniffelScoringService();
 
         // Act
         int result = sut.CalculateScore(wurf, scoreId);
@@ -48,7 +48,7 @@ public class ParameterizedKniffelScoringServiceTests
     public void CalculateScore_strongly_typed_parameterized_Test_using_ClassDataSource(Wurf wurf, ScoreId scoreId, int expected)
     {
         // Arrange
-        var sut = new ParameterizedKniffelScoringService();
+        var sut = new KniffelScoringService();
 
         // Act
         int result = sut.CalculateScore(wurf, scoreId);
@@ -64,7 +64,7 @@ public class ParameterizedKniffelScoringServiceTests
     public void CalculateScore_strongly_typed_parameterized_Test_using_MemberData(Wurf wurf, ScoreId scoreId, int expected)
     {
         // Arrange
-        var sut = new ParameterizedKniffelScoringService();
+        var sut = new KniffelScoringService();
 
         // Act
         int result = sut.CalculateScore(wurf, scoreId);
@@ -80,7 +80,7 @@ public class ParameterizedKniffelScoringServiceTests
     public void CalculateScore_parameterized_Test_using_MemberData(int a, int b, int c, int d, int e, ScoreId scoreId, int expected)
     {
         // Arrange
-        var sut = new ParameterizedKniffelScoringService();
+        var sut = new KniffelScoringService();
         var wurf = new Wurf(a, b, c, d, e);
 
         // Act
