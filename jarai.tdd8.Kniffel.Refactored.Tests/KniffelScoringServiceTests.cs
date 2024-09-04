@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using jarai.tdd8.KniffelRefactored.Tests.TestDataSources;
 using Xunit;
 
 namespace jarai.tdd8.KniffelRefactored.Tests;
@@ -15,7 +15,7 @@ public class KniffelScoringServiceTests
         var sut = new KniffelScoringService();
 
         // Act
-        int result = sut.CalculateScore(wurf, ScoringRuleId.Chance);
+        int result = sut.CalculateScore(wurf, ScoreId.Chance);
 
         // Assert
         Assert.Equal(15, result);
@@ -24,16 +24,16 @@ public class KniffelScoringServiceTests
 
     // Parameterized Test using InlineData
     [Theory]
-    [InlineData(1, 1, 1, 1, 1, ScoringRuleId.Chance, 5)]
-    [InlineData(4, 4, 4, 3, 3, ScoringRuleId.FullHouse, 25)]
-    public void CalculateScore_parameterized_Test_using_InlineData(int a, int b, int c, int d, int e, ScoringRuleId rule, int expected)
+    [InlineData(1, 1, 1, 1, 1, ScoreId.Chance, 5)]
+    [InlineData(4, 4, 4, 3, 3, ScoreId.FullHouse, 25)]
+    public void CalculateScore_parameterized_Test_using_InlineData(int a, int b, int c, int d, int e, ScoreId scoreId, int expected)
     {
         // Arrange
         var wurf = new Wurf(a, b, c, d, e);
         var sut = new KniffelScoringService();
 
         // Act
-        int result = sut.CalculateScore(wurf, rule);
+        int result = sut.CalculateScore(wurf, scoreId);
 
         // Assert
         Assert.Equal(expected, result);
@@ -43,14 +43,30 @@ public class KniffelScoringServiceTests
     // Parameterized Test using ClassData
     [Theory]
     [ClassData(typeof(TestDataSourceClass))]
-    public void CalculateScore_parameterized_Test_using_ClassDataSource(int a, int b, int c, int d, int e, ScoringRuleId rule, int expected)
+    public void CalculateScore_parameterized_Test_using_ClassDataSource(int a, int b, int c, int d, int e, ScoreId scoreId, int expected)
     {
         // Arrange
         var wurf = new Wurf(a, b, c, d, e);
         var sut = new KniffelScoringService();
 
         // Act
-        int result = sut.CalculateScore(wurf, rule);
+        int result = sut.CalculateScore(wurf, scoreId);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
+
+
+    // Parameterized Test using ClassData
+    [Theory]
+    [ClassData(typeof(StronglyTypedTestDataSourceClass))]
+    public void CalculateScore_strongly_typed_parameterized_Test_using_ClassDataSource(Wurf wurf, ScoreId scoreId, int expected)
+    {
+        // Arrange
+        var sut = new KniffelScoringService();
+
+        // Act
+        int result = sut.CalculateScore(wurf, scoreId);
 
         // Assert
         Assert.Equal(expected, result);
@@ -60,13 +76,13 @@ public class KniffelScoringServiceTests
     // Parameterized Test using strongly typed MemberData  
     [Theory]
     [MemberData(nameof(StronglyTypedTestDataSourceMemberFunction))]
-    public void CalculateScore_parameterized_Test_using_strongly_typed_MemberData(Wurf wurf, ScoringRuleId rule, int expected)
+    public void CalculateScore_strongly_typed_parameterized_Test_using_MemberData(Wurf wurf, ScoreId scoreId, int expected)
     {
         // Arrange
         var sut = new KniffelScoringService();
 
         // Act
-        int result = sut.CalculateScore(wurf, rule);
+        int result = sut.CalculateScore(wurf, scoreId);
 
         // Assert
         Assert.Equal(expected, result);
@@ -76,14 +92,14 @@ public class KniffelScoringServiceTests
     // Parameterized Test using MemberData 
     [Theory]
     [MemberData(nameof(TestDataSourceMemberFunction))]
-    public void CalculateScore_parameterized_Test_using_MemberData(int a, int b, int c, int d, int e, ScoringRuleId rule, int expected)
+    public void CalculateScore_parameterized_Test_using_MemberData(int a, int b, int c, int d, int e, ScoreId scoreId, int expected)
     {
         // Arrange
         var sut = new KniffelScoringService();
         var wurf = new Wurf(a, b, c, d, e);
 
         // Act
-        int result = sut.CalculateScore(wurf, rule);
+        int result = sut.CalculateScore(wurf, scoreId);
 
         // Assert
         Assert.Equal(expected, result);
@@ -96,9 +112,9 @@ public class KniffelScoringServiceTests
     {
         return new List<object[]>
         {
-            new object[] { 1, 2, 3, 4, 3, ScoringRuleId.SmallStraight, 30 },
-            new object[] { 1, 2, 3, 1, 3, ScoringRuleId.SmallStraight, 0 },
-            new object[] { 2, 3, 4, 5, 6, ScoringRuleId.LargeStraight, 40 }
+            new object[] { 1, 2, 3, 4, 3, ScoreId.SmallStraight, 30 },
+            new object[] { 1, 2, 3, 1, 3, ScoreId.SmallStraight, 0 },
+            new object[] { 2, 3, 4, 5, 6, ScoreId.LargeStraight, 40 }
         };
     }
 
@@ -106,38 +122,14 @@ public class KniffelScoringServiceTests
     /// <summary>
     ///     Static Member Function which returns the data for the [MemberData] parametrized Test
     /// </summary>
-    public static TheoryData<Wurf, ScoringRuleId, int> StronglyTypedTestDataSourceMemberFunction()
+    public static TheoryData<Wurf, ScoreId, int> StronglyTypedTestDataSourceMemberFunction()
     {
-        return new TheoryData<Wurf, ScoringRuleId, int>
+        return new TheoryData<Wurf, ScoreId, int>
         {
-            { new Wurf(6, 6, 6, 3, 1), ScoringRuleId.ThreeOfAKind, 22 },
-            { new Wurf(3, 3, 3, 3, 5), ScoringRuleId.FourOfAKind, 17 }
+            { new Wurf(6, 6, 6, 3, 1), ScoreId.ThreeOfAKind, 22 },
+            { new Wurf(3, 3, 3, 3, 5), ScoreId.FourOfAKind, 17 }
         };
     }
 
-    /// <summary>
-    ///     External Class which returns the data for the [ClassData] parameterized Test
-    /// </summary>
-    public class TestDataSourceClass : IEnumerable<object[]>
-    {
-        private readonly List<object[]> _data = new()
-        {
-            new object[] { 6, 6, 6, 6, 6, ScoringRuleId.Sixes, 30 },
-            new object[] { 5, 5, 5, 5, 5, ScoringRuleId.Fives, 25 },
-            new object[] { 4, 4, 4, 4, 5, ScoringRuleId.Fours, 16 },
-            new object[] { 3, 3, 3, 4, 5, ScoringRuleId.Threes, 9 },
-            new object[] { 2, 2, 1, 4, 2, ScoringRuleId.Twos, 6 },
-            new object[] { 1, 2, 1, 4, 1, ScoringRuleId.Ones, 3 }
-        };
 
-        public IEnumerator<object[]> GetEnumerator()
-        {
-            return _data.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
-    }
 }

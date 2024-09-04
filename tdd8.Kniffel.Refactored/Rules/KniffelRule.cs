@@ -2,7 +2,7 @@ namespace jarai.tdd8.KniffelRefactored.Rules;
 
 public class KniffelRule : ScoringRule
 {
-    public KniffelRule() : base(ScoringRuleId.Kniffel, "Kniffel")
+    public KniffelRule() : base(ScoreId.Kniffel, "Kniffel")
     {
     }
 

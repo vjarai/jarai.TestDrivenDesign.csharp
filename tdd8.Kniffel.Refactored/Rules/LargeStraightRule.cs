@@ -2,7 +2,7 @@ namespace jarai.tdd8.KniffelRefactored.Rules;
 
 public class LargeStraightRule : ScoringRule
 {
-    public LargeStraightRule() : base(ScoringRuleId.LargeStraight, "Grosse Strasse")
+    public LargeStraightRule() : base(ScoreId.LargeStraight, "Grosse Strasse")
     {
     }
 

@@ -4,7 +4,7 @@ public class CountRule : ScoringRule
 {
     private readonly int _wert;
 
-    public CountRule(ScoringRuleId ruleId, string name, int wert) : base(ruleId, name)
+    public CountRule(ScoreId ruleId, string name, int wert) : base(ruleId, name)
     {
         _wert = wert;
     }

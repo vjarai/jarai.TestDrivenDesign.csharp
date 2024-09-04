@@ -1,6 +1,6 @@
 namespace jarai.tdd8.KniffelRefactored;
 
-public enum ScoringRuleId
+public enum ScoreId
 {
     Count,
     ThreeOfAKind,
