@@ -4,9 +4,9 @@ namespace jarai.tdd8.KniffelRefactored.Tests.TestDataSources;
 
 // https://andrewlock.net/creating-strongly-typed-xunit-theory-test-data-with-theorydata/
 
-public class StronglyTypedTestDataSourceClass : TheoryData<Wurf, ScoreId, int>
+public class StronglyTypedScoringServiceTestDataSource : TheoryData<Wurf, ScoreId, int>
 {
-    public StronglyTypedTestDataSourceClass()
+    public StronglyTypedScoringServiceTestDataSource()
     {
         Add(new Wurf(6, 6, 6, 6, 6), ScoreId.Sixes, 30);
         Add(new Wurf(5, 5, 5, 5, 5), ScoreId.Fives, 25);
@@ -15,5 +15,4 @@ public class StronglyTypedTestDataSourceClass : TheoryData<Wurf, ScoreId, int>
         Add(new Wurf(2, 2, 1, 4, 2), ScoreId.Twos, 6);
         Add(new Wurf(1, 2, 1, 4, 1), ScoreId.Ones, 3);
     }
-
 }

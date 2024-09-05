@@ -18,21 +18,6 @@ public class Wurf : IEnumerable<int>
         _wuerfel = _wuerfel.Order().ToArray();
     }
 
-    /// <summary>
-    /// Returns the counts of each die face in the Wurf.
-    /// </summary>
-    public int[] GetCounts()
-    {
-        int[] counts = new int[6];
-
-        foreach (int die in _wuerfel)
-        {
-            counts[die - 1]++;
-        }
-
-        return counts;
-    }
-
     public Wurf(params int[] wuerfel)
     {
         if (wuerfel.Length != 5)
@@ -50,6 +35,21 @@ public class Wurf : IEnumerable<int>
     IEnumerator IEnumerable.GetEnumerator()
     {
         return _wuerfel.GetEnumerator();
+    }
+
+    /// <summary>
+    ///     Returns the counts of each die face in the Wurf.
+    /// </summary>
+    public int[] GetCounts()
+    {
+        var counts = new int[6];
+
+        foreach (int die in _wuerfel)
+        {
+            counts[die - 1]++;
+        }
+
+        return counts;
     }
 
     public override string ToString()

@@ -8,9 +8,6 @@ public class LargeStraightRule : ScoringRule
 
     public override int CalculateScore(Wurf wurf)
     {
-        var counts = wurf.GetCounts();
-
-        return counts.All(c => c <= 1)? 40 : 0;
-
+        return wurf.GetCounts().Order().Skip(1).All(count => count == 1) ? 40 : 0;
     }
 }

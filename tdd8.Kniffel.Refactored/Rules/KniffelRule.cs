@@ -8,7 +8,7 @@ public class KniffelRule : ScoringRule
 
     public override int CalculateScore(Wurf wurf)
     {
-        var counts = wurf.GetCounts();
+        int[] counts = wurf.GetCounts();
 
         for (var i = 0; i != 6; i++)
         {

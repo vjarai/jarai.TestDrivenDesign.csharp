@@ -8,7 +8,7 @@ namespace jarai.tdd8.KniffelRefactored.Tests.TestDataSources;
 /// <summary>
 ///     External Class which returns the data for the [ClassData] parameterized Test
 /// </summary>
-public class TestDataSourceClass : IEnumerable<object[]>
+public class ScoringServiceTestDataSource : IEnumerable<object[]>
 {
     private readonly List<object[]> _data = new()
     {
