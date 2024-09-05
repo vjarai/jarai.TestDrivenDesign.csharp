@@ -3,9 +3,9 @@
 namespace jarai.tdd3.TestDoubles;
 
 /// <summary>
-///     "Fake" Implementierung von IMotor (z.B. zum Debuggen)
+///     "Fake" Implementierung von IMotor mit eingeschränkter Funktionalität
 /// </summary>
-public class FakeMotor : IMotor
+public class MotorStub : IMotor
 {
     public void Anlassen()
     {
@@ -16,4 +16,6 @@ public class FakeMotor : IMotor
     {
         Debug.WriteLine("Motor abstellen");
     }
+
+    public int Drehzahl { get; set; } = 1000;
 }

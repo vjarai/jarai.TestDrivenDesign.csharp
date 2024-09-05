@@ -2,13 +2,13 @@
 
 namespace jarai.tdd3.TestDoubles.Tests;
 
-public class PkwTestsUsingFakeMotor
+public class PkwTestsUsingMotorStub
 {
     [Fact]
     public void Fahren_erhoeht_Tachostand()
     {
         // Arrange
-        var target = new Pkw(new FakeMotor());
+        var target = new Pkw(new MotorStub());
 
         // Act
         target.Fahren(100);

@@ -17,12 +17,11 @@
       <FileName>Cabrio.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="jarai.tdd3.TestDoubles.FakeMotor">
+  <Class Name="jarai.tdd3.TestDoubles.MotorStub">
     <Position X="4.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
-      <FileName>FakeMotor.cs</FileName>
-      <NewMemberFileName>StubbedMotor.cs</NewMemberFileName>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAABAA=</HashCode>
+      <FileName>MotorStub.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -34,18 +33,18 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="jarai.tdd3.TestDoubles.StubbedMotor">
+  <Class Name="jarai.tdd3.TestDoubles.MotorMock">
     <Position X="8.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
-      <FileName>StubbedMotor.cs</FileName>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAABAA=</HashCode>
+      <FileName>MotorMock.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="jarai.tdd3.TestDoubles.IMotor">
     <Position X="6.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAABAA=</HashCode>
       <FileName>IMotor.cs</FileName>
     </TypeIdentifier>
   </Interface>
