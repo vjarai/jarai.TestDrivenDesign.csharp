@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace jarai.tdd8.KniffelRefactored;
+namespace jarai.tdd8.Kniffel;
 
 public class Wurf : IEnumerable<int>
 {

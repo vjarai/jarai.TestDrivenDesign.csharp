@@ -1,6 +1,6 @@
-using jarai.tdd8.KniffelRefactored.Rules;
+using jarai.tdd8.Kniffel.ScoringRules;
 
-namespace jarai.tdd8.KniffelRefactored;
+namespace jarai.tdd8.Kniffel;
 
 public class KniffelScoringService
 {
@@ -27,7 +27,9 @@ public class KniffelScoringService
         };
     }
 
-
+    /// <summary>
+    ///     Constructor with Depency Injection for Testing/Mocking
+    /// </summary>
     public KniffelScoringService(params ScoringRule[] rules)
     {
         _rules = rules;

@@ -1,8 +1,8 @@
-namespace jarai.tdd8.KniffelRefactored.Rules;
+namespace jarai.tdd8.Kniffel.ScoringRules;
 
-public class FourOfAKindRule : ScoringRule
+public class ThreeOfAKindRule : ScoringRule
 {
-    public FourOfAKindRule() : base(ScoreId.FourOfAKind, "Vierer Pasch")
+    public ThreeOfAKindRule() : base(ScoreId.ThreeOfAKind, "Dreier Pasch")
     {
     }
 
@@ -12,7 +12,7 @@ public class FourOfAKindRule : ScoringRule
 
         for (var i = 0; i < 6; i++)
         {
-            if (counts[i] >= 4)
+            if (counts[i] >= 3)
                 return wurf.Sum();
         }
 

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using jarai.tdd8.KniffelRefactored.Tests.TestDataSources;
+using jarai.tdd8.Kniffel.Tests.TestDataSources;
 using Xunit;
 
 // xUnit.net is a free, open source, community-focused unit testing tool for the .NET Framework.
@@ -8,7 +8,7 @@ using Xunit;
 // Moq is a popular .NET mocking library for C#. This is a quick start guide to using Moq.
 // https://github.com/devlooped/moq/wiki/Quickstart
 
-namespace jarai.tdd8.KniffelRefactored.Tests;
+namespace jarai.tdd8.Kniffel.Tests;
 
 public class ParameterizedKniffelScoringServiceTests
 {

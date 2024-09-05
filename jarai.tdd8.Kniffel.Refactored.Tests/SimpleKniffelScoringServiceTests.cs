@@ -1,7 +1,9 @@
 ﻿using System.Linq;
+using jarai.tdd8.Kniffel.ScoringRules;
+using Moq;
 using Xunit;
 
-namespace jarai.tdd8.KniffelRefactored.Tests;
+namespace jarai.tdd8.Kniffel.Tests;
 
 public class SimpleKniffelScoringServiceTests
 {
@@ -51,5 +53,25 @@ public class SimpleKniffelScoringServiceTests
 
         // Besser: Single Assert by using result object and its Equals method
         Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void CalculateScorings_calls_Rule_CalculateScore()
+    {
+        // https://github.com/devlooped/moq/wiki/Quickstart
+
+        // Arrange
+        var wurf = new Wurf(1, 2, 3, 4, 5);
+
+        var mockedRule = new Mock<ScoringRule>();
+        mockedRule.Setup(r => r.CalculateScore(wurf)).Returns(15);
+
+        var sut = new KniffelScoringService(mockedRule.Object);
+
+        // Act
+        var result = sut.CalculateScorings(wurf).First();
+
+        // Assert
+        mockedRule.Verify(r => r.CalculateScore(wurf), Times.Once);
     }
 }

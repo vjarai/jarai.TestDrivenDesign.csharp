@@ -1,4 +1,4 @@
-namespace jarai.tdd8.KniffelRefactored;
+namespace jarai.tdd8.Kniffel;
 
 public class ScoringResult
 {

@@ -33,13 +33,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd5.AutoFixture", "j
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd5.AutoFixture.Tests", "jarai.tdd5.AutoFixture.Tests\jarai.tdd5.AutoFixture.Tests.csproj", "{D17F2B12-1F10-4A1A-9061-2F8837A5F90C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd8.KniffelLegacy", "jarai.tdd8.Kniffel\jarai.tdd8.KniffelLegacy.csproj", "{5229AF16-43C6-480F-8A9E-840CC4395EA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd8.Kniffel.Legacy", "jarai.tdd8.Kniffel\jarai.tdd8.Kniffel.Legacy.csproj", "{5229AF16-43C6-480F-8A9E-840CC4395EA7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd8.KniffelLegacy.Tests", "jarai.tdd8.KniffelTests\jarai.tdd8.KniffelLegacy.Tests.csproj", "{FB4E196B-3C77-420D-ACED-C63C8A2CF0FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd8.Kniffel.Legacy.Tests", "jarai.tdd8.KniffelTests\jarai.tdd8.Kniffel.Legacy.Tests.csproj", "{FB4E196B-3C77-420D-ACED-C63C8A2CF0FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd8.KniffelRefactored", "tdd8.Kniffel.Refactored\jarai.tdd8.KniffelRefactored.csproj", "{B58738B4-7F7A-453B-9E8D-6905F96558D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd8.Kniffel", "tdd8.Kniffel.Refactored\jarai.tdd8.Kniffel.csproj", "{B58738B4-7F7A-453B-9E8D-6905F96558D9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd8.KniffelRefactored.Tests", "jarai.tdd8.Kniffel.Refactored.Tests\jarai.tdd8.KniffelRefactored.Tests.csproj", "{71F0B4AE-A9E8-45A1-A671-7E613130C4E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd8.Kniffel.Tests", "jarai.tdd8.Kniffel.Refactored.Tests\jarai.tdd8.Kniffel.Tests.csproj", "{71F0B4AE-A9E8-45A1-A671-7E613130C4E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

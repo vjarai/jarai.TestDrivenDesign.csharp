@@ -1,4 +1,4 @@
-namespace jarai.tdd8.KniffelRefactored.Rules;
+namespace jarai.tdd8.Kniffel.ScoringRules;
 
 public class ChanceRule : ScoringRule
 {

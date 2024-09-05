@@ -1,22 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="jarai.tdd8.KniffelRefactored.Wurf">
-    <Position X="12.75" Y="1.5" Width="2" />
+  <Class Name="jarai.tdd8.Kniffel.Wurf">
+    <Position X="12.75" Y="5" Width="3" />
     <TypeIdentifier>
       <HashCode>AARAAAAAAAAAABAEAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Wurf.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="jarai.tdd8.KniffelRefactored.Rules.ScoringRule">
-    <Position X="8" Y="1.75" Width="3" />
-    <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAAAAAAQAAAAAgAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Rules\ScoringRule.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="jarai.tdd8.KniffelRefactored.KniffelScoringService">
-    <Position X="1.25" Y="1.75" Width="4" />
+  <Class Name="jarai.tdd8.Kniffel.KniffelScoringService">
+    <Position X="2" Y="5.5" Width="4" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>KniffelScoringService.cs</FileName>
@@ -25,60 +18,67 @@
       <Field Name="_rules" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="jarai.tdd8.KniffelRefactored.Rules.ChanceRule" Collapsed="true">
-    <Position X="1" Y="6.5" Width="1.5" />
+  <Class Name="jarai.tdd8.Kniffel.ScoringRules.ScoringRule">
+    <Position X="7.75" Y="5.25" Width="3" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Rules\ChanceRule.cs</FileName>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAQAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScoringRules\ScoringRule.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="jarai.tdd8.KniffelRefactored.Rules.CountRule" Collapsed="true">
-    <Position X="3.25" Y="6.5" Width="1.5" />
+  <Class Name="jarai.tdd8.Kniffel.ScoringRules.ChanceRule" Collapsed="true">
+    <Position X="1" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScoringRules\ChanceRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd8.Kniffel.ScoringRules.CountRule" Collapsed="true">
+    <Position X="3.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Rules\CountRule.cs</FileName>
+      <FileName>ScoringRules\CountRule.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="jarai.tdd8.KniffelRefactored.Rules.FourOfAKindRule" Collapsed="true">
-    <Position X="5.5" Y="6.5" Width="1.5" />
+  <Class Name="jarai.tdd8.Kniffel.ScoringRules.FourOfAKindRule" Collapsed="true">
+    <Position X="5.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Rules\FourOfAKindRule.cs</FileName>
+      <FileName>ScoringRules\FourOfAKindRule.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="jarai.tdd8.KniffelRefactored.Rules.FullHouseRule" Collapsed="true">
-    <Position X="7.75" Y="6.5" Width="1.5" />
+  <Class Name="jarai.tdd8.Kniffel.ScoringRules.FullHouseRule" Collapsed="true">
+    <Position X="7.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Rules\FullHouseRule.cs</FileName>
+      <FileName>ScoringRules\FullHouseRule.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="jarai.tdd8.KniffelRefactored.Rules.KniffelRule" Collapsed="true">
-    <Position X="10" Y="6.5" Width="1.5" />
+  <Class Name="jarai.tdd8.Kniffel.ScoringRules.KniffelRule" Collapsed="true">
+    <Position X="10" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Rules\KniffelRule.cs</FileName>
+      <FileName>ScoringRules\KniffelRule.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="jarai.tdd8.KniffelRefactored.Rules.LargeStraightRule" Collapsed="true">
-    <Position X="12.25" Y="6.5" Width="1.5" />
+  <Class Name="jarai.tdd8.Kniffel.ScoringRules.LargeStraightRule" Collapsed="true">
+    <Position X="12.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Rules\LargeStraightRule.cs</FileName>
+      <FileName>ScoringRules\LargeStraightRule.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="jarai.tdd8.KniffelRefactored.Rules.SmallStraightRule" Collapsed="true">
-    <Position X="14.5" Y="6.5" Width="1.5" />
+  <Class Name="jarai.tdd8.Kniffel.ScoringRules.SmallStraightRule" Collapsed="true">
+    <Position X="14.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Rules\SmallStraightRule.cs</FileName>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>ScoringRules\SmallStraightRule.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="jarai.tdd8.KniffelRefactored.Rules.ThreeOfAKindRule" Collapsed="true">
-    <Position X="16.75" Y="6.5" Width="1.5" />
+  <Class Name="jarai.tdd8.Kniffel.ScoringRules.ThreeOfAKindRule" Collapsed="true">
+    <Position X="16.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Rules\ThreeOfAKindRule.cs</FileName>
+      <FileName>ScoringRules\ThreeOfAKindRule.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

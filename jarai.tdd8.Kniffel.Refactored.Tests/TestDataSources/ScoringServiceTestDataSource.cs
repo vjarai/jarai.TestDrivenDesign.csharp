@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace jarai.tdd8.KniffelRefactored.Tests.TestDataSources;
+namespace jarai.tdd8.Kniffel.Tests.TestDataSources;
 
 // https://andrewlock.net/creating-strongly-typed-xunit-theory-test-data-with-theorydata/
 

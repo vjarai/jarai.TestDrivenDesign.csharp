@@ -1,7 +1,14 @@
-namespace jarai.tdd8.KniffelRefactored.Rules;
+namespace jarai.tdd8.Kniffel.ScoringRules;
 
 public abstract class ScoringRule
 {
+    /// <summary>
+    ///     Default Construktor needed for Moq mocking
+    /// </summary>
+    public ScoringRule()
+    {
+    }
+
     protected ScoringRule(ScoreId scoreId, string name)
     {
         Name = name;
