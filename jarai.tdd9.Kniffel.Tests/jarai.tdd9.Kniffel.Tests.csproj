@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\jarai.tdd9.Kniffel\jarai.tdd9.Kniffel.csproj" />
     <ProjectReference Include="..\tdd8.Kniffel.Refactored\jarai.tdd9.Kniffel.csproj" />
   </ItemGroup>
 
