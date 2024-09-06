@@ -1,6 +1,6 @@
-using jarai.tdd8.Kniffel.ScoringRules;
+using jarai.tdd9.Kniffel.ScoringRules;
 
-namespace jarai.tdd8.Kniffel;
+namespace jarai.tdd9.Kniffel;
 
 public class KniffelScoringService
 {

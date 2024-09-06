@@ -1,9 +1,9 @@
 ﻿using System.Linq;
-using jarai.tdd8.Kniffel.ScoringRules;
+using jarai.tdd9.Kniffel.ScoringRules;
 using Moq;
 using Xunit;
 
-namespace jarai.tdd8.Kniffel.Tests;
+namespace jarai.tdd9.Kniffel.Tests;
 
 public class SimpleKniffelScoringServiceTests
 {

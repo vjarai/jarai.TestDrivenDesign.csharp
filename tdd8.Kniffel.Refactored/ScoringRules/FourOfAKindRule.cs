@@ -1,4 +1,4 @@
-namespace jarai.tdd8.Kniffel.ScoringRules;
+namespace jarai.tdd9.Kniffel.ScoringRules;
 
 public class FourOfAKindRule : ScoringRule
 {

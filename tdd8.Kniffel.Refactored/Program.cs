@@ -1,4 +1,4 @@
-﻿namespace jarai.tdd8.Kniffel;
+﻿namespace jarai.tdd9.Kniffel;
 
 internal class Program
 {

@@ -1,4 +1,4 @@
-namespace jarai.tdd8.Kniffel.ScoringRules;
+namespace jarai.tdd9.Kniffel.ScoringRules;
 
 public class KniffelRule : ScoringRule
 {
@@ -10,12 +10,7 @@ public class KniffelRule : ScoringRule
     {
         int[] counts = wurf.GetCounts();
 
-        for (var i = 0; i != 6; i++)
-        {
-            if (counts[i] == 5)
-                return 50;
-        }
+        return counts.Any(c => c == 5) ? 50 : 0;
 
-        return 0;
     }
 }
