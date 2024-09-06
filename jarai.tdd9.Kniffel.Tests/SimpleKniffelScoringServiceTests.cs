@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using FluentAssertions.Execution;
 using jarai.tdd9.Kniffel.ScoringRules;
 using Moq;
 using Xunit;
@@ -17,11 +18,21 @@ public class SimpleKniffelScoringServiceTests
         // Act
         var actual = sut.CalculateScorings(wurf).First();
 
-        // Bad Smell: Multiple Asserts
+        // Bad Smell: Mehrere Asserts nacheinander (bricht beim ersten Fehler ab)
         Assert.Equal(ScoreId.SmallStraight, actual.ScoreId);
         Assert.Equal(30, actual.Score);
 
-        // Besser: Single Assert by using actual object and its Equals method
+        // Besser: Assert.Multiple (führt alle Asserts aus)
+        Assert.Multiple(
+            () => Assert.Equal(ScoreId.SmallStraight, actual.ScoreId),
+            () => Assert.Equal(30, actual.Score));
+
+        // oder AssertionScope: https://fluentassertions.com/introduction
+        using var scope = new AssertionScope();
+        Assert.Equal(ScoreId.SmallStraight, actual.ScoreId);
+        Assert.Equal(30, actual.Score);
+
+        // Am Besten: Single Assert by using an actual object and its Equals method
         var expected = new ScoringResult(ScoreId.SmallStraight, 30);
         Assert.Equal(expected, actual);
     }
@@ -37,7 +48,7 @@ public class SimpleKniffelScoringServiceTests
         var mockedRule = new Mock<ScoringRule>();
         mockedRule.Setup(r => r.CalculateScore(wurf)).Returns(15);
 
-        var sut = new KniffelScoringService( new []{mockedRule.Object});
+        var sut = new KniffelScoringService(new[] { mockedRule.Object });
 
         // Act
         var actual = sut.CalculateScorings(wurf).First();
