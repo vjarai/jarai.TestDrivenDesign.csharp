@@ -3,6 +3,11 @@ using Xunit;
 
 namespace jarai.tdd9.Kniffel.Tests.ScoringRules;
 
+// Zugriff auf internal Elemente in einer anderen Assembly
+// erfordert InternalsVisibleTo Attribut in deren AssemblyInfo.cs
+// siehe jarai.tdd9.Kniffel/Properties/AssemblyInfo.cs
+// [assembly: InternalsVisibleTo("jarai.tdd9.Kniffel.Tests")]
+
 public class ChanceRuleTests
 {
     [Fact]
