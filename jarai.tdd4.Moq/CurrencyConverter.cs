@@ -45,10 +45,10 @@ public class CurrencyConverter
         }
     }
 
-    private static void CheckRate(double rate)
+    internal void CheckRate(double rate)
     {
         if (rate < 0)
-            throw new ArgumentException("Retrieved rate not equal or greater than zero");
+            throw new ArgumentException("Retrieved must be equal or greater than zero");
     }
 
     private static void CheckAmount(double amount)

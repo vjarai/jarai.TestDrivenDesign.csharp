@@ -41,6 +41,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd9.Kniffel.Tests", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jarai.tdd8.Kniffel.Legacy.Tests", "jarai.tdd8.Kniffel.Tests\jarai.tdd8.Kniffel.Legacy.Tests.csproj", "{91147729-8B11-4FF1-84CA-2C6B55150475}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd4b.Adapter", "jarai.tdd10.Adapter\jarai.tdd4b.Adapter.csproj", "{5566369F-E568-454C-9D62-9BC0D62110FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarai.tdd4b.Adapter.Tests", "jarai.tdd10.Adapter.Tests\jarai.tdd4b.Adapter.Tests.csproj", "{650359BD-019E-44F9-B716-C52C2CBED539}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +127,14 @@ Global
 		{91147729-8B11-4FF1-84CA-2C6B55150475}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91147729-8B11-4FF1-84CA-2C6B55150475}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91147729-8B11-4FF1-84CA-2C6B55150475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5566369F-E568-454C-9D62-9BC0D62110FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5566369F-E568-454C-9D62-9BC0D62110FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5566369F-E568-454C-9D62-9BC0D62110FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5566369F-E568-454C-9D62-9BC0D62110FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{650359BD-019E-44F9-B716-C52C2CBED539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650359BD-019E-44F9-B716-C52C2CBED539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650359BD-019E-44F9-B716-C52C2CBED539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650359BD-019E-44F9-B716-C52C2CBED539}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

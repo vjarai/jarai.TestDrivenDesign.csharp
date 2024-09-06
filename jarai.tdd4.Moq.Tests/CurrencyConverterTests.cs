@@ -1,4 +1,5 @@
-﻿using Moq;
+﻿using jarai.tdd4.Moq;
+using Moq;
 using Xunit;
 
 namespace jarai.tdd4.Moq.Tests;
@@ -10,7 +11,7 @@ public class CurrencyConverterTests
     [InlineData("USD", "EUR", .8, .8)]
     [InlineData("EUR", "USD", 1.2, 1.2)]
     [InlineData("EUR", "EUR", 1.0, 1.0)]
-    public void Convert_ValidCurrencies(string fromCurrency, string toCurrency, double rate, double result)
+    public void Convert_ValidCurrencies(string fromCurrency, string toCurrency, double rate, double expected)
     {
         // Arrange
         var changeRateService = new Mock<IChangeRateService>();
@@ -28,7 +29,7 @@ public class CurrencyConverterTests
         double actual = currencyConverter.Convert(fromCurrency, toCurrency, 1.0);
 
         // Assert
-        Assert.Equal(result, actual, 4);
+        Assert.Equal(expected, actual, 4);
     }
 
     [Fact]
@@ -43,9 +44,22 @@ public class CurrencyConverterTests
         var target = new CurrencyConverter(changeRateService.Object);
 
         // Act
-        var exception = Record.Exception(() => target.Convert("<unknown>", "<unknown>", 1.0));
+        Assert.Throws<ArgumentException>(() => target.Convert("<unknown>", "<unknown>", 1.0));
+    }
+
+    [Fact()]
+    public void CheckRateTest()
+    {
+        // Das Testen interner Methoden ist in der Regel ein Bad smell!
+        // Durch ein InternalsVisibleTo Attribut in der AssemblyInfo.cs ist es in Ausnahmefällen prinzipiell möglich 
+
+        // Arrange
+        var sut = new CurrencyConverter(new Mock<IChangeRateService>().Object);
+
+        // Act
+
 
         // Assert
-        Assert.IsType<ArgumentException>(exception);
+        Assert.Throws<ArgumentException>(() => sut.CheckRate(-10));
     }
 }

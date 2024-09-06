@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="jarai.tdd10.Adapter.AppleCharger">
+    <Position X="5.5" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AppleCharger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd10.Adapter.ApplePhone">
+    <Position X="0.75" Y="0.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApplePhone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd10.Adapter.UsbCharger">
+    <Position X="10.5" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsbCharger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jarai.tdd10.Adapter.UsbChargerToAppleChagerAdapter">
+    <Position X="4.75" Y="3" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsbChargerToAppleChagerAdapter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_usbCharger" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
