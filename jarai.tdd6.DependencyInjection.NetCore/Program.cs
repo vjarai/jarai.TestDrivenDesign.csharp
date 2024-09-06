@@ -9,7 +9,9 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        using var host = CreateHostBuilder(args).Build();
+        var hostBuilder = CreateHostBuilder(args);
+        using var host = hostBuilder.Build();
+
         var serviceProvider = host.Services.CreateScope().ServiceProvider;
 
         try
@@ -22,26 +24,31 @@ internal class Program
             Console.WriteLine(e.Message);
         }
 
-        IHostBuilder CreateHostBuilder(string[] strings)
+    }
+
+    static IHostBuilder CreateHostBuilder(string[] strings)
+    {
+        var hostBuilder = Host.CreateDefaultBuilder();
+
+        hostBuilder.ConfigureServices((_, services) =>
         {
-            return Host.CreateDefaultBuilder().ConfigureServices((_, services) =>
-            {
-                // Registrierung aller Abhängigkeiten
-                services.AddSingleton<ViewModel>(); // Singleton => Eine einzige Instanz für Alle
-                services.AddSingleton<Lagerverwaltung>();
-                services.AddSingleton<Buchhaltung>();
-                services.AddSingleton<UserInterface>();
-                services.AddSingleton<KontoFactory>();
-                services.AddSingleton<Bestellservice>();
-                services.AddSingleton<Versandservice>();
+            // Registrierung aller Abhängigkeiten
+            services.AddSingleton<ViewModel>(); // Singleton => Eine einzige Instanz für Alle
+            services.AddSingleton<Lagerverwaltung>();
+            services.AddSingleton<Buchhaltung>();
+            services.AddSingleton<UserInterface>();
+            services.AddSingleton<KontoFactory>();
+            services.AddSingleton<Bestellservice>();
+            services.AddSingleton<Versandservice>();
 
-                // https://stackoverflow.com/questions/38138100/addtransient-addscoped-and-addsingleton-services-differences
-                //services.AddSingleton<ILogger, FileLogger>();
-                //services.AddScoped<ILogger, ConsoleLogger>();
-                services.AddTransient<ILogger, ConsoleLogger>(); // transient => Eine neue Instanz für jeden
+            // https://stackoverflow.com/questions/38138100/addtransient-addscoped-and-addsingleton-services-differences
+            //services.AddSingleton<ILogger, FileLogger>();
+            //services.AddScoped<ILogger, ConsoleLogger>();
+            services.AddTransient<ILogger, ConsoleLogger>(); // transient => Eine neue Instanz für jeden
 
-                services.AddSingleton<Applikation>();
-            });
-        }
+            services.AddSingleton<Applikation>();
+        });
+
+        return hostBuilder;
     }
 }

@@ -1,6 +1,6 @@
 namespace jarai.tdd9.Kniffel.ScoringRules;
 
-public class ChanceRule : ScoringRule
+internal class ChanceRule : ScoringRule
 {
     public ChanceRule() : base(ScoreId.Chance, "Chance")
     {
