@@ -8,8 +8,13 @@ public class FullHouseRule : ScoringRule
 
     public override int CalculateScore(Wurf wurf)
     {
+        return CanCalculateScore(wurf) ? 25 : 0;
+    }
+
+    public override bool CanCalculateScore(Wurf wurf)
+    {
         int[] counts = wurf.GetCounts();
 
-        return counts.Any(c => c == 3) && counts.Any(c => c == 2) ? 25 : 0;
+        return counts.Any(c => c == 3) && counts.Any(c => c == 2);
     }
 }

@@ -8,14 +8,11 @@ public class FourOfAKindRule : ScoringRule
 
     public override int CalculateScore(Wurf wurf)
     {
-        int[] counts = wurf.GetCounts();
+        return CanCalculateScore(wurf) ? wurf.Sum() : 0;
+    }
 
-        for (var i = 0; i < 6; i++)
-        {
-            if (counts[i] >= 4)
-                return wurf.Sum();
-        }
-
-        return 0;
+    public override bool CanCalculateScore(Wurf wurf)
+    {
+        return wurf.GetCounts().Any(c => c >= 4);
     }
 }

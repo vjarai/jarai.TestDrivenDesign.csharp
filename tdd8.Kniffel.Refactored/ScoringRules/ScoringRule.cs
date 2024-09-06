@@ -21,4 +21,6 @@ public abstract class ScoringRule
 
 
     public abstract int CalculateScore(Wurf wurf);
+
+    public abstract bool CanCalculateScore(Wurf wurf);
 }

@@ -2,15 +2,20 @@ namespace jarai.tdd9.Kniffel.ScoringRules;
 
 public class CountRule : ScoringRule
 {
-    private readonly int _wert;
+    private readonly int _zielWert;
 
-    public CountRule(ScoreId ruleId, string name, int wert) : base(ruleId, name)
+    public CountRule(int zielWert, ScoreId ruleId, string name) : base(ruleId, name)
     {
-        _wert = wert;
+        _zielWert = zielWert;
     }
 
     public override int CalculateScore(Wurf wurf)
     {
-        return wurf.Count(die => die == _wert) * _wert;
+        return wurf.Count(wert => wert == _zielWert) * _zielWert;
+    }
+
+    public override bool CanCalculateScore(Wurf wurf)
+    {
+        return wurf.Count(wert => wert == _zielWert) >= 1;
     }
 }

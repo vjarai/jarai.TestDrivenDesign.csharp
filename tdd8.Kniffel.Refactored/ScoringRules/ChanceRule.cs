@@ -10,4 +10,9 @@ public class ChanceRule : ScoringRule
     {
         return wurf.Sum();
     }
+
+    public override bool CanCalculateScore(Wurf wurf)
+    {
+        return true;
+    }
 }

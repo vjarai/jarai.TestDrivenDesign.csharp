@@ -8,9 +8,11 @@ public class KniffelRule : ScoringRule
 
     public override int CalculateScore(Wurf wurf)
     {
-        int[] counts = wurf.GetCounts();
+        return CanCalculateScore(wurf) ? 50 : 0;
+    }
 
-        return counts.Any(c => c == 5) ? 50 : 0;
-
+    public override bool CanCalculateScore(Wurf wurf)
+    {
+        return wurf.GetCounts().Any(c => c == 5);
     }
 }

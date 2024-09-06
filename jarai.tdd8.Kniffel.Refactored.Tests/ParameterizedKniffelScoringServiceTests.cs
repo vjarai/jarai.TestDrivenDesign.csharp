@@ -16,7 +16,7 @@ public class ParameterizedKniffelScoringServiceTests
 
     public ParameterizedKniffelScoringServiceTests()
     {
-        // Fixture setup
+        // Fixture setup via Constructor
         _sut = new KniffelScoringService();
     }
 
@@ -30,10 +30,10 @@ public class ParameterizedKniffelScoringServiceTests
         var wurf = new Wurf(a, b, c, d, e);
 
         // Act
-        int result = _sut.CalculateScore(scoreId, wurf);
+        int actual = _sut.CalculateScore(scoreId, wurf);
 
         // Assert
-        Assert.Equal(expected, result);
+        Assert.Equal(expected, actual);
     }
 
 
@@ -46,10 +46,10 @@ public class ParameterizedKniffelScoringServiceTests
         var wurf = new Wurf(a, b, c, d, e);
 
         // Act
-        int result = _sut.CalculateScore(scoreId, wurf);
+        int actual = _sut.CalculateScore(scoreId, wurf);
 
         // Assert
-        Assert.Equal(expected, result);
+        Assert.Equal(expected, actual);
     }
 
 
@@ -61,10 +61,10 @@ public class ParameterizedKniffelScoringServiceTests
         // Arrange
 
         // Act
-        int result = _sut.CalculateScore(scoreId, wurf);
+        int actual = _sut.CalculateScore(scoreId, wurf);
 
         // Assert
-        Assert.Equal(expected, result);
+        Assert.Equal(expected, actual);
     }
 
 
@@ -76,10 +76,10 @@ public class ParameterizedKniffelScoringServiceTests
         // Arrange
 
         // Act
-        int result = _sut.CalculateScore(scoreId, wurf);
+        int actual = _sut.CalculateScore(scoreId, wurf);
 
         // Assert
-        Assert.Equal(expected, result);
+        Assert.Equal(expected, actual);
     }
 
 
@@ -92,10 +92,10 @@ public class ParameterizedKniffelScoringServiceTests
         var wurf = new Wurf(a, b, c, d, e);
 
         // Act
-        int result = _sut.CalculateScore(scoreId, wurf);
+        int actual = _sut.CalculateScore(scoreId, wurf);
 
         // Assert
-        Assert.Equal(expected, result);
+        Assert.Equal(expected, actual);
     }
 
     /// <summary>

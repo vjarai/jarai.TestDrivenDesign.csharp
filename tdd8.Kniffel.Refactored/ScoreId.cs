@@ -2,7 +2,7 @@ namespace jarai.tdd9.Kniffel;
 
 public enum ScoreId
 {
-    Count,
+    //Count,
     ThreeOfAKind,
     FourOfAKind,
     FullHouse,

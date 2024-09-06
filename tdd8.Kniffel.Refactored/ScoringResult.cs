@@ -2,16 +2,16 @@ namespace jarai.tdd9.Kniffel;
 
 public class ScoringResult
 {
-    public ScoringResult(ScoreId scoreId, int result, string? ruleName = null)
+    public ScoringResult(ScoreId scoreId, int score, string? ruleName = null)
     {
         ScoreId = scoreId;
         RuleName = ruleName ?? scoreId.ToString();
-        Result = result;
+        Score = score;
     }
 
     public ScoreId ScoreId { get; }
     public string RuleName { get; }
-    public int Result { get; }
+    public int Score { get; }
 
     public override bool Equals(object? obj)
     {
@@ -24,16 +24,16 @@ public class ScoringResult
 
     protected bool Equals(ScoringResult other)
     {
-        return ScoreId == other.ScoreId && Result == other.Result;
+        return ScoreId == other.ScoreId && Score == other.Score;
     }
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(RuleName, Result);
+        return HashCode.Combine(RuleName, Score);
     }
 
     public override string ToString()
     {
-        return $"{Result:d2} : {RuleName}";
+        return $"{Score:d2} : {RuleName}";
     }
 }

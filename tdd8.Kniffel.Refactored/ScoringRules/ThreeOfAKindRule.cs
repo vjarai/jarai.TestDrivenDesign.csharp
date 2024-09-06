@@ -8,14 +8,13 @@ public class ThreeOfAKindRule : ScoringRule
 
     public override int CalculateScore(Wurf wurf)
     {
+        return CanCalculateScore(wurf) ? wurf.Sum() : 0;
+    }
+
+    public override bool CanCalculateScore(Wurf wurf)
+    {
         int[] counts = wurf.GetCounts();
 
-        for (var i = 0; i < 6; i++)
-        {
-            if (counts[i] >= 3)
-                return wurf.Sum();
-        }
-
-        return 0;
+        return counts.Any(c => c >= 3);
     }
 }

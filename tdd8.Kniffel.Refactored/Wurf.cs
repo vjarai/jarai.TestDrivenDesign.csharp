@@ -4,18 +4,11 @@ namespace jarai.tdd9.Kniffel;
 
 public class Wurf : IEnumerable<int>
 {
-    private readonly int[] _wuerfel = new int[5];
+    private readonly IEnumerable<int> _wuerfel;
 
     public Wurf()
     {
-        var random = new Random();
-
-        for (var i = 0; i < _wuerfel.Length; i++)
-        {
-            _wuerfel[i] = random.Next(1, 7);
-        }
-
-        _wuerfel = _wuerfel.Order().ToArray();
+        _wuerfel = CreateRandom().Order();
     }
 
     public Wurf(params int[] wuerfel)
@@ -23,7 +16,7 @@ public class Wurf : IEnumerable<int>
         if (wuerfel.Length != 5)
             throw new ArgumentException("A Wurf must contain exactly 5 numbers.");
 
-        _wuerfel = wuerfel.Order().ToArray();
+        _wuerfel = wuerfel.Order();
     }
 
 
@@ -37,16 +30,26 @@ public class Wurf : IEnumerable<int>
         return _wuerfel.GetEnumerator();
     }
 
+    private IEnumerable<int> CreateRandom()
+    {
+        var random = new Random();
+
+        for (var i = 0; i < 5; i++)
+        {
+            yield return random.Next(1, 7);
+        }
+    }
+
     /// <summary>
-    ///     Returns the counts of each die face in the Wurf.
+    ///     Returns the counts of each die face in the Wurf (Häufigkeitsverteilung)
     /// </summary>
     public int[] GetCounts()
     {
         var counts = new int[6];
 
-        foreach (int die in _wuerfel)
+        foreach (int wert in _wuerfel)
         {
-            counts[die - 1]++;
+            counts[wert - 1]++;
         }
 
         return counts;

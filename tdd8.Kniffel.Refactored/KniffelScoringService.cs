@@ -10,12 +10,12 @@ public class KniffelScoringService
     {
         _rules = new List<ScoringRule>
         {
-            new CountRule(ScoreId.Ones, "Einer", 1),
-            new CountRule(ScoreId.Twos, "Zweier", 2),
-            new CountRule(ScoreId.Threes, "Dreier", 3),
-            new CountRule(ScoreId.Fours, "Vierer", 4),
-            new CountRule(ScoreId.Fives, "Fünfer", 5),
-            new CountRule(ScoreId.Sixes, "Sechser", 6),
+            new CountRule(1, ScoreId.Ones, "Einer"),
+            new CountRule(2, ScoreId.Twos, "Zweier"),
+            new CountRule(3, ScoreId.Threes, "Dreier"),
+            new CountRule(4, ScoreId.Fours, "Vierer"),
+            new CountRule(5, ScoreId.Fives, "Fünfer"),
+            new CountRule(6, ScoreId.Sixes, "Sechser"),
 
             new ThreeOfAKindRule(),
             new FourOfAKindRule(),
