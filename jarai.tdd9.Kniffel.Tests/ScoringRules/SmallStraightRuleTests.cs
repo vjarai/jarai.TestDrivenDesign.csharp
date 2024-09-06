@@ -5,17 +5,19 @@ namespace jarai.tdd9.Kniffel.Tests.ScoringRules;
 
 public class SmallStraightRuleTests
 {
-    [Fact]
-    public void CalculateScore_12634_Should_30()
+    [Theory]
+    [InlineData(2, 3, 4, 1, 6, 30)] // Positiv Test
+    [InlineData(1, 3, 4, 1, 1, 0)]  // Negativ Test
+    public void CalculateScore_Should_30_or_0(int a, int b, int c, int d, int e, int expected)
     {
         // Arrange
-        var wurf = new Wurf(1, 2, 6, 3, 4);
+        var wurf = new Wurf(a, b, c, d, e);
         var sut = new SmallStraightRule();
 
         // Act
         int actual = sut.CalculateScore(wurf);
 
         // Assert
-        Assert.Equal(30, actual);
+        Assert.Equal(expected, actual);
     }
 }

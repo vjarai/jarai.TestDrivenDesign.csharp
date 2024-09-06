@@ -18,4 +18,18 @@ public class FourOfAKindRuleTests
         // Assert
         Assert.Equal(21, actual);
     }
+
+    [Fact]
+    public void CalculateScore_55153_Should_0()
+    {
+        // Arrange
+        var wurf = new Wurf(5, 5, 1, 5, 3);
+        var sut = new FourOfAKindRule();
+
+        // Act
+        int actual = sut.CalculateScore(wurf);
+
+        // Assert
+        Assert.Equal(0, actual);
+    }
 }

@@ -1,4 +1,9 @@
-﻿namespace jarai.tdd9.Kniffel;
+﻿using jarai.tdd9.Kniffel.ScoringRules;
+using System.Data;
+
+namespace jarai.tdd9.Kniffel;
+
+// Viktor@Jarai.de1
 
 internal class Program
 {
@@ -16,7 +21,9 @@ internal class Program
         //var wurf = new Wurf(5, 5, 5, 3, 3);
         //var wurf = new Wurf(3, 3, 3, 3, 3);
         //var wurf = new Wurf(4, 3, 2, 5,  1 );
-        var scoringService = new KniffelScoringService();
+
+        // TODO: Create KniffelScoringService with all rules via IoC Container
+        var scoringService = CreateKniffelScoringService();
 
         do
         {
@@ -25,12 +32,36 @@ internal class Program
 
             Console.WriteLine(wurf);
 
-            foreach (var scoring in scorings)
+            foreach (var score in scorings)
             {
-                Console.WriteLine(scoring);
+                Console.WriteLine(score);
             }
 
             Console.WriteLine("Noch einmal? (j/n)");
+
         } while (Console.ReadLine().ToUpper() != "N");
+    }
+
+    private static KniffelScoringService CreateKniffelScoringService()
+    {
+        var rules = new List<ScoringRule>
+        {
+            new CountRule(1, ScoreId.Ones, "Einer"),
+            new CountRule(2, ScoreId.Twos, "Zweier"),
+            new CountRule(3, ScoreId.Threes, "Dreier"),
+            new CountRule(4, ScoreId.Fours, "Vierer"),
+            new CountRule(5, ScoreId.Fives, "Fünfer"),
+            new CountRule(6, ScoreId.Sixes, "Sechser"),
+
+            new ThreeOfAKindRule(),
+            new FourOfAKindRule(),
+            new FullHouseRule(),
+            new SmallStraightRule(),
+            new LargeStraightRule(),
+            new KniffelRule(),
+            new ChanceRule()
+        };
+
+        return new KniffelScoringService(rules);
     }
 }

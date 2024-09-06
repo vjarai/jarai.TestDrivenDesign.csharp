@@ -6,9 +6,40 @@ public class KniffelScoringService
 {
     private readonly IEnumerable<ScoringRule> _rules;
 
+    /// <summary>
+    ///     Constructor enables injection of Depencies 
+    /// </summary>
+    public KniffelScoringService(IEnumerable<ScoringRule> rules)
+    {
+        _rules = rules;
+    }
+
+
     public KniffelScoringService()
     {
-        _rules = new List<ScoringRule>
+        _rules = CreateDefaultRules();
+    }
+
+    public int CalculateScore(ScoreId scoreId, Wurf wurf)
+    {
+        var rule = _rules.Single(r => r.ScoreId == scoreId);
+
+        return rule.CalculateScore(wurf);
+    }
+
+    public IEnumerable<ScoringResult> CalculateScorings(Wurf wurf)
+    {
+        return from rule in _rules
+               let result = rule.CalculateScore(wurf)
+               where result > 0
+               orderby result descending
+               select new ScoringResult(rule.ScoreId, result, rule.Name);
+    }
+
+
+    private IEnumerable<ScoringRule> CreateDefaultRules()
+    {
+        return new List<ScoringRule>
         {
             new CountRule(1, ScoreId.Ones, "Einer"),
             new CountRule(2, ScoreId.Twos, "Zweier"),
@@ -25,29 +56,5 @@ public class KniffelScoringService
             new KniffelRule(),
             new ChanceRule()
         };
-    }
-
-    /// <summary>
-    ///     Constructor with Depency Injection for Testing/Mocking
-    /// </summary>
-    public KniffelScoringService(params ScoringRule[] rules)
-    {
-        _rules = rules;
-    }
-
-    public int CalculateScore(ScoreId scoreId, Wurf wurf)
-    {
-        var rule = _rules.Single(r => r.ScoreId == scoreId);
-
-        return rule.CalculateScore(wurf);
-    }
-
-    public IEnumerable<ScoringResult> CalculateScorings(Wurf wurf)
-    {
-        return from rule in _rules
-            let result = rule.CalculateScore(wurf)
-            where result > 0
-            orderby result descending
-            select new ScoringResult(rule.ScoreId, result, rule.Name);
     }
 }

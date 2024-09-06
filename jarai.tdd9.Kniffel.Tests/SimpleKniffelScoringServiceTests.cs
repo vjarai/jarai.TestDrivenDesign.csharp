@@ -8,10 +8,10 @@ namespace jarai.tdd9.Kniffel.Tests;
 public class SimpleKniffelScoringServiceTests
 {
     [Fact]
-    public void CalculateScorings_when_5_2_4_4_5_shouldReturn_KleineStrasse_First()
+    public void CalculateScorings_when_25345_shouldReturn_KleineStrasse_First()
     {
         // Arrange
-        var wurf = new Wurf(5, 2, 3, 4, 5);
+        var wurf = new Wurf(2, 5, 3, 4, 5);
         var sut = new KniffelScoringService();
 
         // Act
@@ -37,7 +37,7 @@ public class SimpleKniffelScoringServiceTests
         var mockedRule = new Mock<ScoringRule>();
         mockedRule.Setup(r => r.CalculateScore(wurf)).Returns(15);
 
-        var sut = new KniffelScoringService(mockedRule.Object);
+        var sut = new KniffelScoringService( new []{mockedRule.Object});
 
         // Act
         var actual = sut.CalculateScorings(wurf).First();

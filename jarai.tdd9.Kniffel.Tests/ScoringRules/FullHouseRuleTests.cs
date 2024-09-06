@@ -18,4 +18,18 @@ public class FullHouseRuleTests
         // Assert
         Assert.Equal(25, actual);
     }
+
+    [Fact]
+    public void CalculateScore_33356_Should_0()
+    {
+        // Arrange
+        var wurf = new Wurf(3, 3, 3, 5, 6);
+        var sut = new FullHouseRule();
+
+        // Act
+        int actual = sut.CalculateScore(wurf);
+
+        // Assert
+        Assert.Equal(0, actual);
+    }
 }
