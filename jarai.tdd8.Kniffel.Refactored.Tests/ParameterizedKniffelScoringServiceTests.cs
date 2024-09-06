@@ -39,22 +39,6 @@ public class ParameterizedKniffelScoringServiceTests
 
     // Parameterized Test using ClassData
     [Theory]
-    [ClassData(typeof(ScoringServiceTestDataSource))]
-    public void CalculateScore_parameterized_Test_using_ClassDataSource(int a, int b, int c, int d, int e, ScoreId scoreId, int expected)
-    {
-        // Arrange
-        var wurf = new Wurf(a, b, c, d, e);
-
-        // Act
-        int actual = _sut.CalculateScore(scoreId, wurf);
-
-        // Assert
-        Assert.Equal(expected, actual);
-    }
-
-
-    // Parameterized Test using ClassData
-    [Theory]
     [ClassData(typeof(StronglyTypedScoringServiceTestDataSource))]
     public void CalculateScore_strongly_typed_parameterized_Test_using_ClassDataSource(Wurf wurf, ScoreId scoreId, int expected)
     {

@@ -13,7 +13,6 @@ public class SimpleKniffelScoringServiceTests
         // Arrange
         var wurf = new Wurf(5, 2, 3, 4, 5);
         var sut = new KniffelScoringService();
-        var expected = new ScoringResult(ScoreId.SmallStraight, 30);
 
         // Act
         var actual = sut.CalculateScorings(wurf).First();
@@ -23,6 +22,7 @@ public class SimpleKniffelScoringServiceTests
         Assert.Equal(30, actual.Score);
 
         // Besser: Single Assert by using actual object and its Equals method
+        var expected = new ScoringResult(ScoreId.SmallStraight, 30);
         Assert.Equal(expected, actual);
     }
 

@@ -41,7 +41,7 @@ public class Wurf : IEnumerable<int>
     }
 
     /// <summary>
-    ///     Returns the counts of each die face in the Wurf (Häufigkeitsverteilung)
+    ///     Returns the counts of each die face (Häufigkeitsverteilung)
     /// </summary>
     public int[] GetCounts()
     {
