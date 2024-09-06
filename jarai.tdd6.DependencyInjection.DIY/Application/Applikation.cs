@@ -1,7 +1,7 @@
 ﻿namespace jarai.tdd6.DependencyInjection.DIY.Application;
 
 /// <summary>
-/// Das "Komposition Root Object" der kompletten Anwendung
+///     Das "Komposition Root Object" der kompletten Anwendung
 /// </summary>
 public class Applikation
 {

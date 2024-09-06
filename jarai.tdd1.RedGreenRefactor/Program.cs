@@ -7,6 +7,8 @@ internal class Program
         var game = new FizzBuzzGame();
 
         for (var number = 1; number <= 100; number++)
+        {
             Console.WriteLine(game.GetResponse(number));
+        }
     }
 }

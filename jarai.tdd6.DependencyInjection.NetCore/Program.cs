@@ -23,10 +23,9 @@ internal class Program
         {
             Console.WriteLine(e.Message);
         }
-
     }
 
-    static IHostBuilder CreateHostBuilder(string[] strings)
+    private static IHostBuilder CreateHostBuilder(string[] strings)
     {
         var hostBuilder = Host.CreateDefaultBuilder();
 

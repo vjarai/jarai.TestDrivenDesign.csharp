@@ -7,7 +7,7 @@ public class SmallStraightRuleTests
 {
     [Theory]
     [InlineData(2, 3, 4, 1, 6, 30)] // Positiv Test
-    [InlineData(1, 3, 4, 1, 1, 0)]  // Negativ Test
+    [InlineData(1, 3, 4, 1, 1, 0)] // Negativ Test
     public void CalculateScore_Should_30_or_0(int a, int b, int c, int d, int e, int expected)
     {
         // Arrange

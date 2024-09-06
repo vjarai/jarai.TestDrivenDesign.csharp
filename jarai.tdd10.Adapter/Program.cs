@@ -11,6 +11,5 @@ internal class Program
         var usbCharger = new UsbCharger();
         var adapter = new UsbChargerToAppleChagerAdapter(usbCharger);
         iphone.Charge(adapter);
-
     }
 }

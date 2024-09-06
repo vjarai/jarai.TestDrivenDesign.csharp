@@ -7,7 +7,7 @@ public class KniffelScoringService
     private readonly IEnumerable<ScoringRule> _rules;
 
     /// <summary>
-    ///     Constructor enables injection of Depencies 
+    ///     Constructor enables injection of Depencies
     /// </summary>
     public KniffelScoringService(IEnumerable<ScoringRule> rules)
     {
@@ -30,10 +30,10 @@ public class KniffelScoringService
     public IEnumerable<ScoringResult> CalculateScorings(Wurf wurf)
     {
         return from rule in _rules
-               let result = rule.CalculateScore(wurf)
-               where result > 0
-               orderby result descending
-               select new ScoringResult(rule.ScoreId, result, rule.Name);
+            let result = rule.CalculateScore(wurf)
+            where result > 0
+            orderby result descending
+            select new ScoringResult(rule.ScoreId, result, rule.Name);
     }
 
 

@@ -7,7 +7,7 @@ public class KniffelRuleTests
 {
     [Theory]
     [InlineData(5, 5, 5, 5, 5, 50)] // Positiv Test
-    [InlineData(5, 5, 5, 5, 1, 0)]  // Negativ Test
+    [InlineData(5, 5, 5, 5, 1, 0)] // Negativ Test
     public void CalculateScore_Should_50_or_0(int a, int b, int c, int d, int e, int expected)
     {
         // Arrange
@@ -20,5 +20,4 @@ public class KniffelRuleTests
         // Assert
         Assert.Equal(expected, actual);
     }
-
 }

@@ -35,7 +35,6 @@ public class SimpleKniffelScoringServiceTests
         // Am Besten: Single Assert by using an actual object and its Equals method
         var expected = new ScoringResult(ScoreId.SmallStraight, 30);
         Assert.Equal(expected, actual);
-
     }
 
 
@@ -55,7 +54,6 @@ public class SimpleKniffelScoringServiceTests
             item => { Assert.Equal(ScoreId.SmallStraight, item.ScoreId); }
         );
     }
-
 
 
     [Fact]

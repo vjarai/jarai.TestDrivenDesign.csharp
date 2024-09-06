@@ -7,7 +7,7 @@ public class LargeStraightRuleTests
 {
     [Theory]
     [InlineData(2, 3, 4, 5, 6, 40)] // Positiv Test
-    [InlineData(1, 3, 4, 5, 1, 0)]  // Negativ Test
+    [InlineData(1, 3, 4, 5, 1, 0)] // Negativ Test
     public void CalculateScore_Should_40_or_0(int a, int b, int c, int d, int e, int expected)
     {
         // Arrange

@@ -4,7 +4,7 @@ public class UsbCharger
 {
     public virtual int LiefereStromViaUsb()
     {
-        int strom = 500;
+        var strom = 500;
 
         Console.WriteLine($"UsbCharger liefert {strom} mA via USB");
 

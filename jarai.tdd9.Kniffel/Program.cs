@@ -1,5 +1,4 @@
 ﻿using jarai.tdd9.Kniffel.ScoringRules;
-using System.Data;
 
 namespace jarai.tdd9.Kniffel;
 
@@ -38,7 +37,6 @@ internal class Program
             }
 
             Console.WriteLine("Noch einmal? (j/n)");
-
         } while (Console.ReadLine().ToUpper() != "N");
     }
 

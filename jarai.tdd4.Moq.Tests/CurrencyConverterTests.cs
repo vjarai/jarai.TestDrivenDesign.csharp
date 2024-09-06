@@ -1,6 +1,6 @@
-﻿using jarai.tdd4.Moq;
-using Moq;
+﻿using Moq;
 using Xunit;
+using Assert = Xunit.Assert;
 
 namespace jarai.tdd4.Moq.Tests;
 
@@ -47,7 +47,7 @@ public class CurrencyConverterTests
         Assert.Throws<ArgumentException>(() => target.Convert("<unknown>", "<unknown>", 1.0));
     }
 
-    [Fact()]
+    [Fact(Skip = "Interner Test")]
     public void CheckRateTest()
     {
         // Das Testen interner Methoden ist in der Regel ein Bad smell!

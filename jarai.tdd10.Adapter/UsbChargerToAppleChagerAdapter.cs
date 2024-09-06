@@ -6,18 +6,17 @@ public class UsbChargerToAppleChagerAdapter : AppleCharger
 
     public UsbChargerToAppleChagerAdapter(UsbCharger usbCharger)
     {
-        this._usbCharger = usbCharger;
+        _usbCharger = usbCharger;
     }
 
     public override int LiefereStromViaLightning()
     {
         // int strom = base.LiefereStromViaLightning(); // FALSCH!
-        
+
         int strom = _usbCharger.LiefereStromViaUsb(); // RICHTIG, Adapter nutzt UsbCharger
 
         Console.WriteLine($"Adapter liefert {strom} mA via Lightning");
 
         return strom;
-
     }
 }

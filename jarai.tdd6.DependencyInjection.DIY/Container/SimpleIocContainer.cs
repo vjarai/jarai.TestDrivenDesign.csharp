@@ -45,7 +45,10 @@ public class SimpleIocContainer
     private IEnumerable<object> ResolveConstructorParameters(TypeRegistration typeRegistration)
     {
         var constructorInfo = typeRegistration.ConcreteType.GetConstructors().First();
-        foreach (var parameter in constructorInfo.GetParameters()) yield return Resolve(parameter.ParameterType);
+        foreach (var parameter in constructorInfo.GetParameters())
+        {
+            yield return Resolve(parameter.ParameterType);
+        }
     }
 
 
