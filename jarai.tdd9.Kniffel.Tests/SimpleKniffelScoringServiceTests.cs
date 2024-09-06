@@ -35,7 +35,28 @@ public class SimpleKniffelScoringServiceTests
         // Am Besten: Single Assert by using an actual object and its Equals method
         var expected = new ScoringResult(ScoreId.SmallStraight, 30);
         Assert.Equal(expected, actual);
+
     }
+
+
+    [Fact]
+    public void CalculateScorings_when_12345_shouldReturn_LargeStraight_and_SmallStraight_as_Top_2()
+    {
+        // Arrange
+        var wurf = new Wurf(1, 2, 3, 4, 5);
+        var sut = new KniffelScoringService();
+
+        // Act
+        var actual = sut.CalculateScorings(wurf).Take(2);
+
+        // Assert
+        Assert.Collection(actual,
+            item => { Assert.Equal(ScoreId.LargeStraight, item.ScoreId); },
+            item => { Assert.Equal(ScoreId.SmallStraight, item.ScoreId); }
+        );
+    }
+
+
 
     [Fact]
     public void CalculateScorings_calls_Rule_CalculateScore()
