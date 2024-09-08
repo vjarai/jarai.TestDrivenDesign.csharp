@@ -1,23 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="jarai.tdd0.Refresher.Pkw">
-    <Position X="6.5" Y="4" Width="1.5" />
+    <Position X="3.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
       <FileName>Pkw.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_motor" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="jarai.tdd0.Refresher.Motor">
-    <Position X="6.75" Y="2.25" Width="1.5" />
+    <Position X="7" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>Motor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="jarai.tdd0.Refresher.Cabrio">
-    <Position X="6.75" Y="0.5" Width="1.5" />
+    <Position X="3.25" Y="2.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAIAAAAQAAAAAAAA=</HashCode>
       <FileName>Cabrio.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -1,5 +1,21 @@
 ﻿namespace jarai.tdd0.Refresher;
 
-public class Cabrio
+public class Cabrio : Pkw
 {
+    public void Fahren()
+    {
+        VerdeckOeffnen();
+        base.Fahren();
+        VerdeckSchliessen();
+    }
+
+    public void VerdeckOeffnen()
+    {
+        Console.WriteLine("Verdeck öffnen");
+    }
+
+    public void VerdeckSchliessen()
+    {
+        Console.WriteLine("Verdeck schließen");
+    }
 }

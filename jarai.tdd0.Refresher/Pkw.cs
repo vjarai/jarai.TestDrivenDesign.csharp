@@ -2,4 +2,19 @@
 
 public class Pkw
 {
+    private Motor _motor;
+
+    public Pkw()
+    {
+        _motor = new Motor();
+    }
+    public Pkw(Motor motor)
+    {
+        _motor = motor;
+    }
+
+    public void Fahren()
+    {
+        Console.WriteLine("Pkw fährt");
+    }
 }
