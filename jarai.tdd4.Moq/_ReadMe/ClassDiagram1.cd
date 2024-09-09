@@ -11,7 +11,7 @@
     </ShowAsAssociation>
   </Class>
   <Interface Name="jarai.tdd4.Moq.IChangeRateService">
-    <Position X="7" Y="2.75" Width="4.25" />
+    <Position X="5.75" Y="2.75" Width="4.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IChangeRateService.cs</FileName>

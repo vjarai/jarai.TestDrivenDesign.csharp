@@ -15,6 +15,7 @@ public class UsbChargerToAppleChagerAdapterTests
 
         // Act
         iphone.Charge(adapter);
+        // int strom = adapter.LiefereStromViaLightning();
 
         // Assert
         usbChargerMock.Verify(charger => charger.LiefereStromViaUsb(), Times.Once);

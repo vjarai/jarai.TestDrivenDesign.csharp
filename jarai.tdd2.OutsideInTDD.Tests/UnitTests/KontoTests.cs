@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 
 namespace jarai.tdd2.OutsideInTDD.Tests.UnitTests;
 
-[TestClass]
+
 public class KontoTests
 {
-    [TestMethod]
+    [Fact]
     public void EinzahlenTest()
     {
         // Arrange
@@ -15,7 +15,7 @@ public class KontoTests
         target.Einzahlen(100);
     }
 
-    [TestMethod]
+    [Fact]
     public void AbhebenTest()
     {
         // Arrange

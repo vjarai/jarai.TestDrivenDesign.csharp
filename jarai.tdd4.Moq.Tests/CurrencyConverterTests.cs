@@ -28,8 +28,11 @@ public class CurrencyConverterTests
         // Act
         double actual = currencyConverter.Convert(fromCurrency, toCurrency, 1.0);
 
+
         // Assert
         Assert.Equal(expected, actual, 4);
+
+        //changeRateService.VerifyAll();
     }
 
     [Fact]
