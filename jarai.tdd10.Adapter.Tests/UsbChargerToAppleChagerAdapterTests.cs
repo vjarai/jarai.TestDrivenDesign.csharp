@@ -11,6 +11,7 @@ public class UsbChargerToAppleChagerAdapterTests
         // Arrange
         var iphone = new ApplePhone();
         var usbChargerMock = new Mock<UsbCharger>();
+        usbChargerMock.Setup( mock => mock.LiefereStromViaUsb()).Returns(500);
         var adapter = new UsbChargerToAppleChagerAdapter(usbChargerMock.Object);
 
         // Act

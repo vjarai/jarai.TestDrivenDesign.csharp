@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using jarai.tdd9.Kniffel.Tests.TestDataSources;
 using Xunit;
 
@@ -10,14 +11,22 @@ using Xunit;
 
 namespace jarai.tdd9.Kniffel.Tests;
 
-public class ParameterizedKniffelScoringServiceTests
+public class ParameterizedKniffelScoringServiceTests : IDisposable
 {
     private readonly KniffelScoringService _sut;
 
     public ParameterizedKniffelScoringServiceTests()
     {
         // Fixture setup via Constructor
+        // Verschlechtert möglicherweise die Lesbarkeit/Verständlichkeit
         _sut = new KniffelScoringService();
+    }
+
+    public void Dispose()
+    {
+        // Teardown (cleanup) via IDisposable
+        // Verschlechtert möglicherweise die Lesbarkeit/Verständlichkeit
+
     }
 
     // Parameterized Test using InlineData
