@@ -2,7 +2,7 @@
 
 public class Cabrio : Pkw
 {
-    public void Fahren()
+    public override  void Fahren()
     {
         VerdeckOeffnen();
         base.Fahren();

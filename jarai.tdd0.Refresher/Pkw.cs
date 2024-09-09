@@ -13,7 +13,7 @@ public class Pkw
         _motor = motor;
     }
 
-    public void Fahren()
+    public virtual void Fahren()
     {
         Console.WriteLine("Pkw fährt");
     }
