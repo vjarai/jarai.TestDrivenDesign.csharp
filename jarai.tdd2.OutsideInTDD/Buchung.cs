@@ -2,13 +2,13 @@
 
 internal class Buchung
 {
-    public Buchung(double amount, DateTime date)
+    public Buchung(decimal amount, DateTime date)
     {
         Amount = amount;
         Date = date;
     }
 
-    public double Amount { get; }
+    public decimal Amount { get; }
 
     public DateTime Date { get; }
 

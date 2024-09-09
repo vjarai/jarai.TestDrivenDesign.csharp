@@ -2,7 +2,7 @@
 
 internal class KalenderService : IKalenderService
 {
-    public DateTime ToDay()
+    public DateTime Now()
     {
         return DateTime.Now;
     }

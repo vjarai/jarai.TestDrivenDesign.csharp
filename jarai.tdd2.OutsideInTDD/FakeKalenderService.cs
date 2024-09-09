@@ -2,7 +2,7 @@
 
 public class FakeKalenderService : IKalenderService
 {
-    public DateTime ToDay()
+    public DateTime Now()
     {
         return new DateTime(2023, 1, 1);
     }

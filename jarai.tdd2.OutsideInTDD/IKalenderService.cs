@@ -2,5 +2,5 @@
 
 public interface IKalenderService
 {
-    DateTime ToDay();
+    DateTime Now();
 }

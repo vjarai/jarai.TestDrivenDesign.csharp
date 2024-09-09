@@ -2,9 +2,9 @@
 
 public interface IKonto
 {
-    public void Einzahlen(int einzuzahlenderBetrag);
+    public void Einzahlen(decimal einzuzahlenderBetrag);
 
-    public void Abheben(int auszuzahlenderBetrag);
+    public void Abheben(decimal auszuzahlenderBetrag);
 
     public string ErstelleKontoauszug();
 }

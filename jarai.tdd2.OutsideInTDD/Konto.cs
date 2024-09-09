@@ -5,25 +5,28 @@ public class Konto : IKonto
     private readonly List<Buchung> _buchungen = new();
     private readonly IKalenderService _kalenderService;
 
+    public decimal Kontostand { get; private set; } 
 
     public Konto(IKalenderService? kalenderService = null)
     {
         _kalenderService = kalenderService ?? new KalenderService();
     }
 
-    public void Einzahlen(int einzuzahlenderBetrag)
+    public void Einzahlen(decimal einzuzahlenderBetrag)
     {
-        _buchungen.Add(new Buchung(einzuzahlenderBetrag, _kalenderService.ToDay()));
+        Kontostand += einzuzahlenderBetrag;
+        _buchungen.Add(new Buchung(einzuzahlenderBetrag, _kalenderService.Now()));
     }
 
-    public void Abheben(int auszuzahlenderBetrag)
+    public void Abheben(decimal auszuzahlenderBetrag)
     {
-        _buchungen.Add(new Buchung(-auszuzahlenderBetrag, _kalenderService.ToDay()));
+        Kontostand -= auszuzahlenderBetrag;
+        _buchungen.Add(new Buchung(-auszuzahlenderBetrag, _kalenderService.Now()));
     }
 
     public string ErstelleKontoauszug()
     {
-        double saldo = 0;
+        decimal saldo = 0;
         var result = "Datum         Betrag     Saldo\n";
 
         foreach (var buchung in _buchungen)

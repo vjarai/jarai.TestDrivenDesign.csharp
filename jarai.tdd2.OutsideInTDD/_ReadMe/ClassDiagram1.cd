@@ -1,50 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="jarai.tdd2.OutsideInTDD.Konto">
-    <Position X="2" Y="4.5" Width="3" />
+    <Position X="1.5" Y="0.75" Width="3.5" />
+    <Members>
+      <Field Name="_buchungen" Hidden="true" />
+      <Method Name="ErstelleKontoauszug" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAQAAAAAAEA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAEAIAAAAAAAAAAAQAAAAAAEA=</HashCode>
       <FileName>Konto.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="_buchungen" />
-    </ShowAsCollectionAssociation>
+    <ShowAsAssociation>
+      <Field Name="_kalenderService" />
+    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="jarai.tdd2.OutsideInTDD.Buchung">
-    <Position X="7.75" Y="4.75" Width="2.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAACAAAAAAAABAAAAAAAAAAA=</HashCode>
-      <FileName>Buchung.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="jarai.tdd2.OutsideInTDD.FakeKalenderService">
-    <Position X="7.5" Y="3" Width="1.75" />
+    <Position X="8" Y="2.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>FakeKalenderService.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="jarai.tdd2.OutsideInTDD.KalenderService">
-    <Position X="9.75" Y="3" Width="1.75" />
+    <Position X="5.75" Y="2.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>KalenderService.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="jarai.tdd2.OutsideInTDD.IKonto">
-    <Position X="2" Y="1.75" Width="3" />
-    <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAEA=</HashCode>
-      <FileName>IKonto.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="jarai.tdd2.OutsideInTDD.IKalenderService">
-    <Position X="7.5" Y="1.25" Width="2" />
+    <Position X="6.5" Y="0.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IKalenderService.cs</FileName>
     </TypeIdentifier>
   </Interface>
