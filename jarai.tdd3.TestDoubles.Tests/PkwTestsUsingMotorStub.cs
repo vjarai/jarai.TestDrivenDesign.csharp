@@ -8,7 +8,10 @@ public class PkwTestsUsingMotorStub
     public void Fahren_erhoeht_Tachostand()
     {
         // Arrange
-        var target = new Pkw(new MotorStub());
+        var motorStub = new MotorStub();
+        motorStub.Drehzahl = 1000;
+
+        var target = new Pkw(motorStub);
 
         // Act
         target.Fahren(100);

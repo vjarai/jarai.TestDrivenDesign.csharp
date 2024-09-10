@@ -49,7 +49,6 @@ public class PkwTestsUsingMoqMockedMotor
         // Act
         target.Fahren(100);
 
-        // SINGLE Assert mit VerifyAll (besser 2 einzelne Asserts ???)
         motorMock.VerifyAll(); // Verify Expectations
     }
 }

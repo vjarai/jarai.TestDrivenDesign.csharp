@@ -1,21 +1,21 @@
 ﻿namespace jarai.tdd3.TestDoubles;
 
 /// <summary>
-///     Ein Stub liefert "vorgefertigte" Ergebnisse
+///     Ein Mock kann Erwartungen prüfen und einen Test Rot machen
 /// </summary>
 public class MotorMock : IMotor
 {
-    public bool _motorWurdeAbgestellt;
-    public bool _motorWurdeAngelassen;
+    public bool MotorWurdeAbgestellt { get; private set; }
+    public bool MotorWurdeAngelassen { get; private set; }
 
     public void Anlassen()
     {
-        _motorWurdeAngelassen = true;
+        MotorWurdeAngelassen = true;
     }
 
     public void Abstellen()
     {
-        _motorWurdeAbgestellt = true;
+        MotorWurdeAbgestellt = true;
     }
 
     public int Drehzahl { get; set; } = 1000;
