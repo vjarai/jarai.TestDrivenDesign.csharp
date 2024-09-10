@@ -1,7 +1,7 @@
 ﻿namespace jarai.tdd3.TestDoubles;
 
 /// <summary>
-///     Ein Spy ermöglicht das "beobachten" eines internen Verhaltens 
+///     Ein Spy ermöglicht das Beobachten eines internen Verhaltens 
 /// </summary>
 public class MotorSpy : IMotor
 {

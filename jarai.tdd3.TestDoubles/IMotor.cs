@@ -2,7 +2,7 @@
 
 public interface IMotor
 {
-    int Drehzahl { get; set; }
+    int Drehzahl { get; }
     void Anlassen();
     void Abstellen();
 }
